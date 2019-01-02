@@ -44,6 +44,8 @@
     <h1>PHP PORTFOLIO</h1>
     <p>Hieronder een greep uit enkele werkzaamheden. Waaronder deze site en rekenkundige functies geprogrameerd in php.</p>
 
+    <br /><br />
+    <h2>math</h2>
     <h5>optellen</h5>
     <?php
     $num1 = 5;
@@ -72,7 +74,64 @@
     echo $num1 / $num2;
     ?>
 
-    
+    <br /><br />
+    <h2>php math functions</h2>
+    <h5>optellen</h5>
+
+    <?php
+    $globalnum1 = 5;
+    $globalnum2 = 25;
+
+    function add($getal1,$getal2)
+    {
+        global $result;
+        $result = $getal1 + $getal2;
+    }
+    add($globalnum1,$globalnum2);
+    echo $result;
+    ?>
+
+    <h5>aftrekken</h5>
+    <?php
+
+    function sub($getal1,$getal2)
+    {
+        global $result;
+        $result = $getal1 - $getal2;
+    }
+    sub($globalnum1,$globalnum2);
+    echo $result;
+    ?>
+
+    <h5>vermenigvuldigen</h5>
+    <?php
+
+    function mul($getal1,$getal2)
+    {
+        global $result;
+        $result = $getal1 * $getal2;
+    }
+    mul($globalnum1,$globalnum2);
+    echo $result;
+    ?>
+
+    <h5>delen</h5>
+    <?php
+
+    function div($getal1,$getal2)
+    {
+        global $result;
+        $result = $getal1 / $getal2;
+    }
+    div($globalnum1,$globalnum2);
+    echo $result;
+    ?>
+
+    <br /><br />
+    <h2>User inputted php math functions</h2>
+    <h5>optellen</h5>
+
+
 
 
 
