@@ -130,18 +130,14 @@
     <br /><br />
     <h2>User inputted php math functions</h2>
     <h5>optellen</h5>
-    <form>
+    <form action="result.php" method="post">
     <input id="num1" type="number" name="num1" placeholder = "getal 1">
-    </form>
-    <form>
     <input id="num2" type="number" name="num2" placeholder = "getal 2">
-    </form>
     <input type="submit" name="submit" value="Calculate">
+    </form>
 
     <?php
-        $num1 = $_post['num1'];
-        $num2 = $_post['num2'];
-        echo $num1 + $num2;
+
     ?>
 
 
