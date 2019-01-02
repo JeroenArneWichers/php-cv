@@ -11,12 +11,12 @@
     <title>php cv</title>
   </head>
   <body>
-  <h1> CV Arne</h1>
+  <h1> PHP CV JEROEN ARNE WICHERS</h1>
 
-    Personalia:
+    <h5>Personalia:</h5>
 
+    <br />
     <?php
-
     $voornaam = "Jeroen";
     $achternaam = "Wichers";
     $leeftijd = "28";
@@ -24,9 +24,57 @@
     $email = "jwichers@hotmail.com";
     $github = "https://github.com/JeroenArneWichers";
 
-    echo $voornaam." ".$achternaam.",".$leeftijd.",".$woonplaats.",".$email.",".$github;
-
+    echo "voornaam:$voornaam<br />";
+    echo "achternaam:$achternaam<br />";
+    echo "leeftijd:$leeftijd<br />";
+    echo "woonplaats:$woonplaats<br />";
+    echo "email:$email<br />";
+    echo "github:$github<br />";
     ?>
+
+    <br /><br />
+    <h1>PROFIEL</h1>
+    <p>Gemotiveerd, passievol en zeer gewillig om nieuwe ervaringen op te doen 
+    en te investeren in de toekomst. Allround HBO medewerker met hart voor 
+    de zaak. Kennis en ervaring op het gebied van bestuurskunde, overheidsmanagement, 
+    onderzoek en integriteit. Ook bezit ik alle vaardigheden met betrekking tot zowel 
+    front-end als back-end development, waaronder php.</p>
+
+    <br /><br />
+    <h1>PHP PORTFOLIO</h1>
+    <p>Hieronder een greep uit enkele werkzaamheden. Waaronder deze site en rekenkundige functies geprogrameerd in php.</p>
+
+    <h5>optellen</h5>
+    <?php
+    $num1 = 5;
+    $num2 = 25;
+    echo $num1 + $num2;
+    ?>
+
+    <h5>aftrekken</h5>
+    <?php
+    $num1 = 500;
+    $num2 = 250;
+    echo $num1 - $num2;
+    ?>
+
+    <h5>vermenigvuldigen</h5>
+    <?php
+    $num1 = 70;
+    $num2 = 3;
+    echo $num1 * $num2;
+    ?>
+
+    <h5>delen</h5>
+    <?php
+    $num1 = 2100;
+    $num2 = 21;
+    echo $num1 / $num2;
+    ?>
+
+    
+
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
