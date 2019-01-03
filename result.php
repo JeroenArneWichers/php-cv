@@ -13,11 +13,18 @@
   <body>
   <h1> De uitkomst is</h1>
 
-    <h5>De uitkomst van de berekining is:</h5>
+    <h5>De uitkomst van de berekening is:</h5>
     <?php
-
-    $result = $_POST["num1"]
-
+      echo "eerste getal is:" . $num1 = $_POST["num1"] . "<br>";
+      echo "tweede getal is:" . $num2 = $_POST["num2"] . "<br>";
+      
+      function add($getal1,$getal2)
+      {
+          global $result;
+          $result = $getal1 + $getal2;
+      }
+      add($num1,$num2);
+      echo "Resultaat van de berekening is:" . $result;
     ?>
 
 

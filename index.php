@@ -211,16 +211,6 @@
     ?>
 
     <br /><br />
-    <h5>getallen aflopend van 20 naar 0 in sprongen van 2</h5>
-
-    <?php
-    for($getal = 20; $getal >= 20; $getal--)
-    {
-        echo "$getal <br>";
-    }
-    ?>
-
-    <br /><br />
     <h2>PHP for while loops</h2>
     <h5>optellen van getallen</h5>
 
@@ -242,9 +232,13 @@
     echo "eindresultaat:$totaal";
     ?>
 
+    <br><br>
+    <h2>PHP raadspelletje</h2>
+    <h5>een spelletje waarbij je een te geraden getal moet invullen.</h5>
 
-
-
+    <?php
+    
+    ?>
 
 
 
