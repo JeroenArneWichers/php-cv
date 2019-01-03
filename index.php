@@ -136,9 +136,112 @@
     <input type="submit" name="submit" value="Calculate">
     </form>
 
+    <br /><br />
+    <h2>PHP statements</h2>
+    <h5>kortingen en toeslagen</h5>
     <?php
+        //startwaarden
+        $prijsArtikel = 100;
+        $leeftijdKoper = 70;
+        $teBetalen = $prijsArtikel;
+        $woonplaats = "Enschede";
 
+        //alle bewerkingen
+
+        if ($woonplaats == "Enschede")
+        {
+            $teBetalen = $prijsArtikel / 2;
+        }
+        else
+        {
+            if ($leeftijdKoper <= 18)
+                $toeslag = $prijsArtikel * 0.1;
+
+            if ($leeftijdKoper >= 65)
+                $toeslag = $prijsArtikel * 0.05;
+            
+            $teBetalen = $prijsArtikel + $toeslag;
+        }
+
+        //alle output
+        //verwacht iedereen 18 of jonger 10% korting
+        //iedereen ouder dan 18 volledig betalen
+        //iedereen 65of ouder 5% korting
+        //iedereen woont in Enschede 2x zoveel betalen
+        echo $teBetalen;
     ?>
+
+    <br /><br />
+    <h2>PHP for loops</h2>
+    <h5>optellen van getallen</h5>
+    <?php
+    $totaal = 0;
+
+    for ($getal = 1; $getal <= 5; $getal++)
+    {
+        $totaal = $totaal + $getal;
+        echo "$getal <br>";
+    }
+    echo "eindresultaat:$totaal";
+    ?>
+
+    <br><br>
+    <h5>aftellen van 10 naar 0</h5>
+
+    <?php
+    $startwaarde = 10;
+    $waarde = 0;
+    for ($getal = 0; $getal <= 10; $getal++)
+    {
+        $waarde = $startwaarde--;
+        echo "$waarde <br>";
+    }
+    ?>
+
+    <br /><br />
+    <h5>getallen oplopend van 0 naar 20 in sprongen van 2</h5>
+
+    <?php
+    $waarde = 0;
+    for($getal = 0; $getal <=20; $getal++)
+    {
+        $startwaarde = $getal++;
+        echo "$startwaarde <br>";
+    }
+    ?>
+
+    <br /><br />
+    <h5>getallen aflopend van 20 naar 0 in sprongen van 2</h5>
+
+    <?php
+    for($getal = 20; $getal >= 20; $getal--)
+    {
+        echo "$getal <br>";
+    }
+    ?>
+
+    <br /><br />
+    <h2>PHP for while loops</h2>
+    <h5>optellen van getallen</h5>
+
+    <?php
+    //init
+    $getal = 1;
+    $totaal = 0;
+    //loop
+    while($getal <= 5)
+    {
+        //waarde berekenen
+        $totaal = $totaal + $getal;
+        //debug info
+        echo "$getal <br>";
+        //verhoog teller
+        $getal++;
+    }
+    //output result
+    echo "eindresultaat:$totaal";
+    ?>
+
 
 
 
