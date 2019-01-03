@@ -129,12 +129,72 @@
 
     <br /><br />
     <h2>User inputted php math functions</h2>
-    <h5>optellen</h5>
-    <form action="result.php" method="post">
+    <h5>Mutaties</h5>
+    <form action="index.php" method="post">
     <input id="num1" type="number" name="num1" placeholder = "getal 1">
     <input id="num2" type="number" name="num2" placeholder = "getal 2">
     <input type="submit" name="submit" value="Calculate">
     </form>
+
+    <br>
+
+    <?php
+      $num1 = $_POST["num1"];
+      $num2 = $_POST["num2"];
+
+      function optellen($getal1,$getal2)
+      {
+          global $result;
+          $result = $getal1 + $getal2;
+      }
+      optellen($num1,$num2);
+      echo "Resultaat van de berekening" . " " . $num1 . " + " . $num2 . " = " . $result;
+    ?>
+
+    <br>
+
+    <?php
+      $num1 = $_POST["num1"];
+      $num2 = $_POST["num2"];
+
+      function aftrekken($getal1,$getal2)
+      {
+          global $result;
+          $result = $getal1 - $getal2;
+      }
+      aftrekken($num1,$num2);
+      echo "Resultaat van de berekening" . " " . $num1 . " - " . $num2 . " = " . $result;
+    ?>
+
+    <br>
+
+    <?php
+    $num1 = $_POST["num1"];
+    $num2 = $_POST["num2"];
+
+    function vermenigvuldigen($getal1,$getal2)
+    {
+        global $result;
+        $result = $getal1 * $getal2;
+    }
+    vermenigvuldigen($num1,$num2);
+    echo "Resultaat van de berekening" . " " . $num1 . " x " . $num2 . " = " . $result;
+    ?>
+
+    <br>
+
+    <?php
+    $num1 = $_POST["num1"];
+    $num2 = $_POST["num2"];
+
+    function delen($getal1,$getal2)
+    {
+        global $result;
+        $result = $getal1 / $getal2;
+    }
+    delen($num1,$num2);
+    echo "Resultaat van de berekening" . " " . $num1 . " / " . $num2 . " = " . $result;
+    ?>
 
     <br /><br />
     <h2>PHP statements</h2>
@@ -231,16 +291,6 @@
     //output result
     echo "eindresultaat:$totaal";
     ?>
-
-    <br><br>
-    <h2>PHP raadspelletje</h2>
-    <h5>een spelletje waarbij je een te geraden getal moet invullen.</h5>
-
-    <?php
-    
-    ?>
-
-
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

@@ -15,16 +15,16 @@
 
     <h5>De uitkomst van de berekening is:</h5>
     <?php
-      echo "eerste getal is:" . $num1 = $_POST["num1"] . "<br>";
-      echo "tweede getal is:" . $num2 = $_POST["num2"] . "<br>";
-      
+      $num1 = $_POST["num1"];
+      $num2 = $_POST["num2"];
+
       function add($getal1,$getal2)
       {
           global $result;
           $result = $getal1 + $getal2;
       }
       add($num1,$num2);
-      echo "Resultaat van de berekening is:" . $result;
+      echo "Resultaat van de berekening" . " " . $num1 . " + " . $num2 . " = " . $result;
     ?>
 
 
