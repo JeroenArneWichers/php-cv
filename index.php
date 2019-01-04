@@ -7,38 +7,130 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="css/style.css" rel="stylesheet">
 
+    <!-- Title -->
     <title>php cv</title>
   </head>
   <body>
-  <h1> PHP CV JEROEN ARNE WICHERS</h1>
+  <section id="header">
+        <div class="header-container">
+            <h1>Hypertext Preprocessor</h1>
+            <h2>Examples in worming your way trough the slog of trying to understand a 25 year old language.</h2>
+            <a href="" class="btn-calculate-your-options">Let's get started</a>
+        </div>
+    </section>
 
-    <h5>Personalia:</h5>
+    <section id="quotes">
+        <div class="container">
+            <div class="row">
+            <div class="col-lg-12 text-center">
+                <h1>"But first some little known facts about php...</h1>
+                <h1>For example..."</h1>
+            </div>
+            </div>
+        </div>
+    </section>
 
-    <br />
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="card m-5" style="">
+                    <img class="card-img-top" src="./img/faq-background.jpeg" alt="Card image cap">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">PHP was originally created by a Danish-Canadian programmer named Rasmus Lerdorf.</li>
+                        <li class="list-group-item">Although the stable release of PHP only happened on April 12, 2017, it has been around for twenty-five years, as it was first developed in 1994.</li>
+                        <li class="list-group-item">It was developed by Lerdorf to manage his own personal website. Common Gateway Interface (CGI) to work with web forms at the time he was developing PHP.</li>
+                        <li class="list-group-item">When PHP was developed, it was an acronym for Personal Home Page. It was initially known as PHP/FI, which stood for Personal Home Page/Forms Interpreter.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card m-5" style="">
+                    <img class="card-img-top" src="./img/faq-background.jpeg" alt="Card image cap">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">It was not until 1997 that PHP became “Hypertext Preprocessor”. Zeev Suraski and Andi Gutmans rewrote the original software component (parser) forming the base for PHP 3.</li>
+                        <li class="list-group-item">The core of PHP was rewritten by Suraski and Gutmans. Zend Engine was produced in 1999. The new and changed PHP was then released in May 2000, powered by Zend Engine 1.0.</li>
+                        <li class="list-group-item">Although the actual number of PHP developers in the world is not clear, Zend recently estimated that there are more than 5 million PHP Developers.</li>
+                        <li class="list-group-item">PHP is available for free, but there are certain restrictions. For example, if a product is created from PHP, it will need permission from the PHP group to contain PHP in their names.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card m-5" style="">
+                    <img class="card-img-top" src="./img/faq-background.jpeg" alt="Card image cap">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">If Netcraft’s web survey from 2013 is correct, there are 244 million websites, approximately,  that are running PHP. This number must have grown since 2013.</li>
+                        <li class="list-group-item">With PHP 7, PHP is ready for the next generation. The performance of PHP was improved through refactoring. It was authored by Xinchen Hui, Nikita Popov, and Dmitry Stogov.</li>
+                        <li class="list-group-item">Some of the largest online brands, such as Facebook, Flickr, Yahoo, ProProfs, Technorati, Digg, and Friendster are all powered by PHP.</li>
+                        <li class="list-group-item">Popular sites like Wikipedia.org, WordPress.org, Weibo.com, Twitter.com, Qq.Com, Taobao.com, etc., are using PHP.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id="quotes">
+        <div class="container">
+            <div class="row">
+            <div class="col-lg-12 text-center">
+                <h1>"Now that you know...</h1>
+                <h1>Let's start..."</h1>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="jumbotron">
+    <h1 class="display-4">PHP CV JEROEN ARNE WICHERS</h1>
+    <p class="lead">This is going to be an example of echoing a static variable. In this case the personal details of Jeroen Wichers.</p>
+    <hr class="my-4">
+    <p>    
     <?php
-    $voornaam = "Jeroen";
-    $achternaam = "Wichers";
-    $leeftijd = "28";
-    $woonplaats = "Enschede";
-    $email = "jwichers@hotmail.com";
-    $github = "https://github.com/JeroenArneWichers";
+    $FirstName = "Jeroen";
+    $LastName = "Wichers";
+    $Age = "28";
+    $PlaceOfResidence = "Enschede";
+    $Email = "jwichers@hotmail.com";
+    $Github = "https://github.com/JeroenArneWichers";
 
-    echo "voornaam:$voornaam<br />";
-    echo "achternaam:$achternaam<br />";
-    echo "leeftijd:$leeftijd<br />";
-    echo "woonplaats:$woonplaats<br />";
-    echo "email:$email<br />";
-    echo "github:$github<br />";
+    echo "First name:$FirstName<br />";
+    echo "Last name:$LastName<br />";
+    echo "Age:$Age<br />";
+    echo "Place of residence:$PlaceOfResidence<br />";
+    echo "Email:$Email<br />";
+    echo "Github:$Github<br />";
     ?>
+    </p>
+    </div>
 
-    <br /><br />
-    <h1>PROFIEL</h1>
-    <p>Gemotiveerd, passievol en zeer gewillig om nieuwe ervaringen op te doen 
-    en te investeren in de toekomst. Allround HBO medewerker met hart voor 
-    de zaak. Kennis en ervaring op het gebied van bestuurskunde, overheidsmanagement, 
-    onderzoek en integriteit. Ook bezit ik alle vaardigheden met betrekking tot zowel 
-    front-end als back-end development, waaronder php.</p>
+    <div class="jumbotron">
+    <h1 class="display-4">But what just happened?</h1>
+    <p class="lead">Let's delve deeper into what goes on behind the scenes.</p>
+    <hr class="my-4">
+    <p>
+    <!-- <?php
+    echo htmlspecialchars(file_get_contents( "php-code-snippet-1.txt" )); // get the contents, and echo it out.
+    ?> -->
+        <?php
+            $myTextFile = "php-code-snippet-1.txt";
+            //vast stellen van de variabele. Aanroepen .txt bestand.
+
+            $textOutput = fopen($myTextFile, 'r');
+            //zeggen dat hij .txt moet openen. En zet op read only.
+
+            $theData = fread($textOutput, filesize($myTextFile));
+            //zeggen dat hij hem moet lezen. De volledige lengte van het .txt bestand.
+
+            fclose($textOutput);
+            //zeggen dat hij moet stoppen met lezen .txt
+
+            echo '<pre>' . htmlspecialchars ($theData) . '</pre>';
+            //toepassen htmlspecialchars
+            //uitspuugen van de $theData variabele (doorverwijst naar .txt)
+        ?>
+    </p>
+    </div>
 
     <br /><br />
     <h1>PHP PORTFOLIO</h1>
