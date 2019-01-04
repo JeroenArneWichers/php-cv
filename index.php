@@ -81,212 +81,413 @@
         </div>
     </section>
 
-    <div class="jumbotron">
-    <h1 class="display-4">PHP CV JEROEN ARNE WICHERS</h1>
-    <p class="lead">This is going to be an example of echoing a static variable. In this case the personal details of Jeroen Wichers.</p>
-    <hr class="my-4">
-    <p>    
-    <?php
-    $FirstName = "Jeroen";
-    $LastName = "Wichers";
-    $Age = "28";
-    $PlaceOfResidence = "Enschede";
-    $Email = "jwichers@hotmail.com";
-    $Github = "https://github.com/JeroenArneWichers";
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="card m-5" style="">
+                    <img class="card-img-top" src="./img/faq-background.jpeg" alt="Card image cap">
+                    <p class="card-text">
+                    <?php
+                    $FirstName = "Jeroen";
+                    $LastName = "Wichers";
+                    $Age = "28";
+                    $PlaceOfResidence = "Enschede";
+                    $Email = "jwichers@hotmail.com";
+                    $Github = "https://github.com/JeroenArneWichers";
 
-    echo "First name:$FirstName<br />";
-    echo "Last name:$LastName<br />";
-    echo "Age:$Age<br />";
-    echo "Place of residence:$PlaceOfResidence<br />";
-    echo "Email:$Email<br />";
-    echo "Github:$Github<br />";
-    ?>
-    </p>
+                    echo "First name:$FirstName<br />";
+                    echo "Last name:$LastName<br />";
+                    echo "Age:$Age<br />";
+                    echo "Place of residence:$PlaceOfResidence<br />";
+                    echo "Email:$Email<br />";
+                    echo "Github:$Github<br />";
+                    ?>
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card m-5" style="">
+                    <img class="card-img-top" src="./img/faq-background.jpeg" alt="Card image cap">
+                    <p class="card-text">
+                    <?php
+                        $myTextFile = "php-code-snippet-1.txt";
+                        //vast stellen van de variabele. Aanroepen .txt bestand.
+
+                        $textOutput = fopen($myTextFile, 'r');
+                        //zeggen dat hij .txt moet openen. En zet op read only.
+
+                        $theData = fread($textOutput, filesize($myTextFile));
+                        //zeggen dat hij hem moet lezen. De volledige lengte van het .txt bestand.
+
+                        fclose($textOutput);
+                        //zeggen dat hij moet stoppen met lezen .txt
+
+                        echo '<pre>' . htmlspecialchars ($theData) . '</pre>';
+                        //toepassen htmlspecialchars
+                        //uitspuugen van de $theData variabele (doorverwijst naar .txt)
+                    ?>
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card m-5" style="">
+                    <img class="card-img-top" src="./img/faq-background.jpeg" alt="Card image cap">
+                    <p class="card-text">First we start by opening the &lt?php tag.</p>
+                    <p class="card-text">Then we start by defining a variable named $FirstName.</p>
+                    <p class="card-text">We give that variable the content of "Jeroen".</p>
+                    <p class="card-text">The "" denotes that the content is to be regarded as text.</p>
+                    <p class="card-text">We do this for all the variables.</p>
+                    <p class="card-text">With echo we write out First name:</p>
+                    <p class="card-text">Then we call forth the variable $FirstName and write it out.</p>
+                    <p class="card-text">We do this for everything we want to write out.</p>
+                    <p class="card-text">The end is always a php end tag. Like this ?></p>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <div class="jumbotron">
-    <h1 class="display-4">But what just happened?</h1>
-    <p class="lead">Let's delve deeper into what goes on behind the scenes.</p>
-    <hr class="my-4">
-    <p>
-    <!-- <?php
-    echo htmlspecialchars(file_get_contents( "php-code-snippet-1.txt" )); // get the contents, and echo it out.
-    ?> -->
-        <?php
-            $myTextFile = "php-code-snippet-1.txt";
-            //vast stellen van de variabele. Aanroepen .txt bestand.
+    <section id="quotes">
+        <div class="container">
+            <div class="row">
+            <div class="col-lg-12 text-center">
+                <h1>"The basics are now known...</h1>
+                <h1>Let's start doing some math..."</h1>
+            </div>
+            </div>
+        </div>
+    </section>
 
-            $textOutput = fopen($myTextFile, 'r');
-            //zeggen dat hij .txt moet openen. En zet op read only.
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="card m-5" style="">
+                    <img class="card-img-top" src="./img/faq-background.jpeg" alt="Card image cap">
+                    <p class="card-text">
+                    <h5>optellen</h5>
+                    <?php
+                    $num1 = 5;
+                    $num2 = 25;
+                    echo $num1 + $num2;
+                    ?>
+                    </p>
+                    <h5>aftrekken</h5>
+                    <?php
+                    $num1 = 500;
+                    $num2 = 250;
+                    echo $num1 - $num2;
+                    ?>
+                    </p>
+                    <h5>vermenigvuldigen</h5>
+                    <?php
+                    $num1 = 70;
+                    $num2 = 3;
+                    echo $num1 * $num2;
+                    ?>
+                    </p>
+                    <h5>delen</h5>
+                    <?php
+                    $num1 = 2100;
+                    $num2 = 21;
+                    echo $num1 / $num2;
+                    ?>
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card m-5" style="">
+                    <img class="card-img-top" src="./img/faq-background.jpeg" alt="Card image cap">
+                    <p class="card-text">
+                    <?php
+                        $myTextFile = "php-code-snippet-2.txt";
+                        //vast stellen van de variabele. Aanroepen .txt bestand.
 
-            $theData = fread($textOutput, filesize($myTextFile));
-            //zeggen dat hij hem moet lezen. De volledige lengte van het .txt bestand.
+                        $textOutput = fopen($myTextFile, 'r');
+                        //zeggen dat hij .txt moet openen. En zet op read only.
 
-            fclose($textOutput);
-            //zeggen dat hij moet stoppen met lezen .txt
+                        $theData = fread($textOutput, filesize($myTextFile));
+                        //zeggen dat hij hem moet lezen. De volledige lengte van het .txt bestand.
 
-            echo '<pre>' . htmlspecialchars ($theData) . '</pre>';
-            //toepassen htmlspecialchars
-            //uitspuugen van de $theData variabele (doorverwijst naar .txt)
-        ?>
-    </p>
+                        fclose($textOutput);
+                        //zeggen dat hij moet stoppen met lezen .txt
+
+                        echo '<pre>' . htmlspecialchars ($theData) . '</pre>';
+                        //toepassen htmlspecialchars
+                        //uitspuugen van de $theData variabele (doorverwijst naar .txt)
+                    ?>
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card m-5" style="">
+                    <img class="card-img-top" src="./img/faq-background.jpeg" alt="Card image cap">
+                    <p class="card-text">First we start by opening the &lt?php tag.</p>
+                    <p class="card-text">Then we start by defining a variable named $num1.</p>
+                    <p class="card-text">We give that variable the content of 5.</p>
+                    <p class="card-text">We do this for all the variables.</p>
+                    <p class="card-text">PHP can do math for us.</p>
+                    <p class="card-text">We want to call forth variable $num1 and add it to $num2 with echo.</p>
+                    <p class="card-text">A simple plus sign between the variables is enough.</p>
+                    <p class="card-text">The same can be done with - for subtracting and * for multiplying.</p>
+                    <p class="card-text">The end is always a php end tag. Like this ?></p>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <br /><br />
-    <h1>PHP PORTFOLIO</h1>
-    <p>Hieronder een greep uit enkele werkzaamheden. Waaronder deze site en rekenkundige functies geprogrameerd in php.</p>
+    <section id="quotes">
+        <div class="container">
+            <div class="row">
+            <div class="col-lg-12 text-center">
+                <h1>"Let's make it a little bit harder...</h1>
+                <h1>By doing the same thing using functions..."</h1>
+            </div>
+            </div>
+        </div>
+    </section>
 
-    <br /><br />
-    <h2>math</h2>
-    <h5>optellen</h5>
-    <?php
-    $num1 = 5;
-    $num2 = 25;
-    echo $num1 + $num2;
-    ?>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="card m-5" style="">
+                    <img class="card-img-top" src="./img/faq-background.jpeg" alt="Card image cap">
+                    <p class="card-text">
 
-    <h5>aftrekken</h5>
-    <?php
-    $num1 = 500;
-    $num2 = 250;
-    echo $num1 - $num2;
-    ?>
+                    <h5>optellen</h5>
+                    <?php
+                    $num1 = 5;
+                    $num2 = 25;
 
-    <h5>vermenigvuldigen</h5>
-    <?php
-    $num1 = 70;
-    $num2 = 3;
-    echo $num1 * $num2;
-    ?>
+                    function add($number1,$number2)
+                    {
+                        global $result;
+                        $result = $number1 + $number2;
+                    }
+                    add($num1,$num2);
+                    echo $result;
+                    ?>
+                    </p>
 
-    <h5>delen</h5>
-    <?php
-    $num1 = 2100;
-    $num2 = 21;
-    echo $num1 / $num2;
-    ?>
+                    <h5>aftrekken</h5>
+                    <?php
+                    function sub($number1,$number2)
+                    {
+                        global $result;
+                        $result = $number1 - $number2;
+                    }
+                    sub($num1,$num2);
+                    echo $result;
+                    ?>
+                    </p>
 
-    <br /><br />
-    <h2>php math functions</h2>
-    <h5>optellen</h5>
+                    <h5>vermenigvuldigen</h5>
+                    <?php
+                    function mul($number1,$number2)
+                    {
+                        global $result;
+                        $result = $number1 * $number2;
+                    }
+                    mul($num1,$num2);
+                    echo $result;
+                    ?>
+                    </p>
 
-    <?php
-    $globalnum1 = 5;
-    $globalnum2 = 25;
+                    <h5>delen</h5>
+                    <?php
+                    function div($number1,$number2)
+                    {
+                        global $result;
+                        $result = $number1 / $number2;
+                    }
+                    div($num1,$num2);
+                    echo $result;
+                    ?>
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card m-5" style="">
+                    <img class="card-img-top" src="./img/faq-background.jpeg" alt="Card image cap">
+                    <p class="card-text">
+                    <?php
+                        $myTextFile = "php-code-snippet-3.txt";
+                        //vast stellen van de variabele. Aanroepen .txt bestand.
 
-    function add($getal1,$getal2)
-    {
-        global $result;
-        $result = $getal1 + $getal2;
-    }
-    add($globalnum1,$globalnum2);
-    echo $result;
-    ?>
+                        $textOutput = fopen($myTextFile, 'r');
+                        //zeggen dat hij .txt moet openen. En zet op read only.
 
-    <h5>aftrekken</h5>
-    <?php
+                        $theData = fread($textOutput, filesize($myTextFile));
+                        //zeggen dat hij hem moet lezen. De volledige lengte van het .txt bestand.
 
-    function sub($getal1,$getal2)
-    {
-        global $result;
-        $result = $getal1 - $getal2;
-    }
-    sub($globalnum1,$globalnum2);
-    echo $result;
-    ?>
+                        fclose($textOutput);
+                        //zeggen dat hij moet stoppen met lezen .txt
 
-    <h5>vermenigvuldigen</h5>
-    <?php
+                        echo '<pre>' . htmlspecialchars ($theData) . '</pre>';
+                        //toepassen htmlspecialchars
+                        //uitspuugen van de $theData variabele (doorverwijst naar .txt)
+                    ?>
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card m-5" style="">
+                    <img class="card-img-top" src="./img/faq-background.jpeg" alt="Card image cap">
+                    <p class="card-text">First we start by opening the &lt?php tag.</p>
+                    <p class="card-text">Then we start by defining a variable named $num1.</p>
+                    <p class="card-text">We give that variable the content of 5.</p>
+                    <p class="card-text">We do this for all the variables.</p>
+                    <p class="card-text">We create a function called add.</p>
+                    <p class="card-text">We give it empty placeholder variables as named $number1 and $number2.</p>
+                    <p class="card-text">Inside the variable we creat a global variable called $result.</p>
+                    <p class="card-text">We then define $result as the $number1 + $number2.</p>
+                    <p class="card-text">Outside the function we get to call forth the function named add.</p>
+                    <p class="card-text">And we tell it to substitute the empty variables $number1 and $number2 with the content of variable $num1 and $num2.</p>
+                    <p class="card-text">We then echo the $result variable.</p>
+                    <p class="card-text">The end is always a php end tag. Like this ?></p>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    function mul($getal1,$getal2)
-    {
-        global $result;
-        $result = $getal1 * $getal2;
-    }
-    mul($globalnum1,$globalnum2);
-    echo $result;
-    ?>
+    <section id="quotes">
+        <div class="container">
+            <div class="row">
+            <div class="col-lg-12 text-center">
+                <h1>"Time for the truly advanced stuff...</h1>
+                <h1>Let's do math with user input..."</h1>
+            </div>
+            </div>
+        </div>
+    </section>
 
-    <h5>delen</h5>
-    <?php
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="card m-5" style="">
+                    <img class="card-img-top" src="./img/faq-background.jpeg" alt="Card image cap">
+                    <p class="card-text">
+                        <h2>User inputted php math functions</h2>
+                        <h5>Mutaties</h5>
+                        <form action="index.php" method="post">
+                        <input id="num1" type="number" name="num1" placeholder = "getal 1">
+                        <input id="num2" type="number" name="num2" placeholder = "getal 2">
+                        <input type="submit" name="submit" value="Calculate">
+                        </form>
 
-    function div($getal1,$getal2)
-    {
-        global $result;
-        $result = $getal1 / $getal2;
-    }
-    div($globalnum1,$globalnum2);
-    echo $result;
-    ?>
+                        <br>
+                        <?php
+                        $num1 = $_POST["num1"];
+                        $num2 = $_POST["num2"];
 
-    <br /><br />
-    <h2>User inputted php math functions</h2>
-    <h5>Mutaties</h5>
-    <form action="index.php" method="post">
-    <input id="num1" type="number" name="num1" placeholder = "getal 1">
-    <input id="num2" type="number" name="num2" placeholder = "getal 2">
-    <input type="submit" name="submit" value="Calculate">
-    </form>
+                        function optellen($getal1,$getal2)
+                        {
+                            global $result;
+                            $result = $getal1 + $getal2;
+                        }
+                        optellen($num1,$num2);
+                        echo "Resultaat van de berekening" . " " . $num1 . " + " . $num2 . " = " . $result;
+                        ?>
 
-    <br>
+                        <br>
 
-    <?php
-      $num1 = $_POST["num1"];
-      $num2 = $_POST["num2"];
+                        <?php
+                        $num1 = $_POST["num1"];
+                        $num2 = $_POST["num2"];
 
-      function optellen($getal1,$getal2)
-      {
-          global $result;
-          $result = $getal1 + $getal2;
-      }
-      optellen($num1,$num2);
-      echo "Resultaat van de berekening" . " " . $num1 . " + " . $num2 . " = " . $result;
-    ?>
+                        function aftrekken($getal1,$getal2)
+                        {
+                            global $result;
+                            $result = $getal1 - $getal2;
+                        }
+                        aftrekken($num1,$num2);
+                        echo "Resultaat van de berekening" . " " . $num1 . " - " . $num2 . " = " . $result;
+                        ?>
 
-    <br>
+                        <br>
 
-    <?php
-      $num1 = $_POST["num1"];
-      $num2 = $_POST["num2"];
+                        <?php
+                        $num1 = $_POST["num1"];
+                        $num2 = $_POST["num2"];
 
-      function aftrekken($getal1,$getal2)
-      {
-          global $result;
-          $result = $getal1 - $getal2;
-      }
-      aftrekken($num1,$num2);
-      echo "Resultaat van de berekening" . " " . $num1 . " - " . $num2 . " = " . $result;
-    ?>
+                        function vermenigvuldigen($getal1,$getal2)
+                        {
+                            global $result;
+                            $result = $getal1 * $getal2;
+                        }
+                        vermenigvuldigen($num1,$num2);
+                        echo "Resultaat van de berekening" . " " . $num1 . " x " . $num2 . " = " . $result;
+                        ?>
 
-    <br>
+                        <br>
 
-    <?php
-    $num1 = $_POST["num1"];
-    $num2 = $_POST["num2"];
+                        <?php
+                        $num1 = $_POST["num1"];
+                        $num2 = $_POST["num2"];
 
-    function vermenigvuldigen($getal1,$getal2)
-    {
-        global $result;
-        $result = $getal1 * $getal2;
-    }
-    vermenigvuldigen($num1,$num2);
-    echo "Resultaat van de berekening" . " " . $num1 . " x " . $num2 . " = " . $result;
-    ?>
+                        function delen($getal1,$getal2)
+                        {
+                            global $result;
+                            $result = $getal1 / $getal2;
+                        }
+                        delen($num1,$num2);
+                        echo "Resultaat van de berekening" . " " . $num1 . " / " . $num2 . " = " . $result;
+                        ?>
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card m-5" style="">
+                    <img class="card-img-top" src="./img/faq-background.jpeg" alt="Card image cap">
+                    <p class="card-text">
+                    <?php
+                        $myTextFile = "php-code-snippet-3.txt";
+                        //vast stellen van de variabele. Aanroepen .txt bestand.
 
-    <br>
+                        $textOutput = fopen($myTextFile, 'r');
+                        //zeggen dat hij .txt moet openen. En zet op read only.
 
-    <?php
-    $num1 = $_POST["num1"];
-    $num2 = $_POST["num2"];
+                        $theData = fread($textOutput, filesize($myTextFile));
+                        //zeggen dat hij hem moet lezen. De volledige lengte van het .txt bestand.
 
-    function delen($getal1,$getal2)
-    {
-        global $result;
-        $result = $getal1 / $getal2;
-    }
-    delen($num1,$num2);
-    echo "Resultaat van de berekening" . " " . $num1 . " / " . $num2 . " = " . $result;
-    ?>
+                        fclose($textOutput);
+                        //zeggen dat hij moet stoppen met lezen .txt
+
+                        echo '<pre>' . htmlspecialchars ($theData) . '</pre>';
+                        //toepassen htmlspecialchars
+                        //uitspuugen van de $theData variabele (doorverwijst naar .txt)
+                    ?>
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card m-5" style="">
+                    <img class="card-img-top" src="./img/faq-background.jpeg" alt="Card image cap">
+                    <p class="card-text">First we start by opening the &lt?php tag.</p>
+                    <p class="card-text">Then we start by defining a variable named $num1.</p>
+                    <p class="card-text">We give that variable the content of 5.</p>
+                    <p class="card-text">We do this for all the variables.</p>
+                    <p class="card-text">We create a function called add.</p>
+                    <p class="card-text">We give it empty placeholder variables as named $number1 and $number2.</p>
+                    <p class="card-text">Inside the variable we creat a global variable called $result.</p>
+                    <p class="card-text">We then define $result as the $number1 + $number2.</p>
+                    <p class="card-text">Outside the function we get to call forth the function named add.</p>
+                    <p class="card-text">And we tell it to substitute the empty variables $number1 and $number2 with the content of variable $num1 and $num2.</p>
+                    <p class="card-text">We then echo the $result variable.</p>
+                    <p class="card-text">The end is always a php end tag. Like this ?></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id="quotes">
+        <div class="container">
+            <div class="row">
+            <div class="col-lg-12 text-center">
+                <h1>"The next step is statements...</h1>
+                <h1>if statements to be precise..."</h1>
+            </div>
+            </div>
+        </div>
+    </section>
 
     <br /><br />
     <h2>PHP statements</h2>
