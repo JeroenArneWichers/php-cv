@@ -343,6 +343,7 @@
                     <p class="card-text">And we tell it to substitute the empty variables $number1 and $number2 with the content of variable $num1 and $num2.</p>
                     <p class="card-text">We then echo the $result variable.</p>
                     <p class="card-text">The end is always a php end tag. Like this ?></p>
+                    <p class="card-text">ATTENTION! It is of vital importance to remember to not use globals anymore. This was just to showcase php's abilities. ATTENTION!</p>
                 </div>
             </div>
         </div>
@@ -361,7 +362,7 @@
 
     <div class="container-fluid">
         <div class="row">
-            <div class="col-lg-4">
+            <div class="col-lg-3">
                 <div class="card m-5" style="">
                     <img class="card-img-top" src="./img/faq-background.jpeg" alt="Card image cap">
                     <p class="card-text">
@@ -434,12 +435,12 @@
                     </p>
                 </div>
             </div>
-            <div class="col-lg-4">
+            <div class="col-lg-6">
                 <div class="card m-5" style="">
                     <img class="card-img-top" src="./img/faq-background.jpeg" alt="Card image cap">
                     <p class="card-text">
                     <?php
-                        $myTextFile = "php-code-snippet-3.txt";
+                        $myTextFile = "php-code-snippet-4.txt";
                         //vast stellen van de variabele. Aanroepen .txt bestand.
 
                         $textOutput = fopen($myTextFile, 'r');
@@ -458,7 +459,7 @@
                     </p>
                 </div>
             </div>
-            <div class="col-lg-4">
+            <div class="col-lg-3">
                 <div class="card m-5" style="">
                     <img class="card-img-top" src="./img/faq-background.jpeg" alt="Card image cap">
                     <p class="card-text">First we start by opening the &lt?php tag.</p>
