@@ -1,0 +1,42 @@
+<?php
+    $num1 = 5;
+    $num2 = 25;
+
+    function add($number1,$number2)
+    {
+        global $result;
+        $result = $number1 + $number2;
+    }
+    add($num1,$num2);
+    echo $result;
+?>
+
+<?php
+    function sub($number1,$number2)
+    {
+        global $result;
+        $result = $number1 - $number2;
+    }
+    sub($num1,$num2);
+    echo $result;
+    ?>
+
+<?php
+    function mul($number1,$number2)
+    {
+        global $result;
+        $result = $number1 * $number2;
+    }
+    mul($num1,$num2);
+    echo $result;
+    ?>
+
+<?php
+    function div($number1,$number2)
+    {
+        global $result;
+        $result = $number1 / $number2;
+    }
+    div($num1,$num2);
+    echo $result;
+?>
