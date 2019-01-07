@@ -1,0 +1,35 @@
+<form action="index.php" method="post">
+    <input id="naamKoper" type="text" name="naamKoper" placeholder = "uw naam">
+    <input id="leeftijdKoper" type="number" name="leeftijdKoper" placeholder = "uw leeftijd">
+    <input id="woonplaatsKoper" type="text" name="woonplaatsKoper" placeholder = "uw woonplaats">    
+    <input type="submit" name="submit" value="Bereken uw prijs">
+</form>
+
+<?php
+    $prijsArtikel = 100;
+    $naamKoper = $_POST["naamKoper"];
+    $leeftijdKoper = $_POST["leeftijdKoper"];
+    $teBetalen = $prijsArtikel;
+    $woonplaatsKoper = $_POST["woonplaatsKoper"];
+
+    if ($woonplaatsKoper == "Enschede")
+    {
+        $teBetalen = $prijsArtikel / 2;
+    }
+    else
+    {
+        if ($leeftijdKoper <= 18)
+            $toeslag = $prijsArtikel * 0.1;
+
+        if ($leeftijdKoper >= 65)
+            $toeslag = $prijsArtikel * 0.05; 
+        
+        $teBetalen = $prijsArtikel + $toeslag;
+    }
+
+    echo "Offerte <br>";
+    echo "Naam koper: " . "$naamKoper<br>";
+    echo "Leeftijd koper: " . "$leeftijdKoper<br>";
+    echo "Woonplaats koper: " . "$woonplaatsKoper<br>";
+    echo "Te betalen bedrag: " . "$teBetalen";
+?>
