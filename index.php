@@ -13,7 +13,95 @@
     <title>php cv</title>
   </head>
   <body>
-  <section id="header">
+
+<?php
+// $fruit = array ("bananen", "appels", "peren", "sinasappels");
+
+// for($i=0; $i<count($fruit); $i++)
+// {
+// echo $fruit[$i] . "<br>";
+// }
+
+// for($i=(count($fruit)-1); $i>= 0; $i++)
+// {
+// echo $fruit[$i] . "<br>";
+// }
+?>
+
+<?php
+// function biggestNumber($number1, $number2)
+// {
+//     return ($number1 >= $number2 ? $number1 : $number2);
+// }
+
+// function SmallestNumber($number1, $number2)
+// {
+//     return ($number1 <= $number2 ? $number1 : $number2);
+// }
+
+// function gemmideldeWaarde($number1, $number2)
+// {
+//     return ($number1 + $number2) / 2;
+// }
+
+// echo gemmideldeWaarde(5,10);
+// echo "<br>";
+// echo gemmideldeWaarde(2,2);
+// echo "<br>";
+// echo gemmideldeWaarde(2.5,3);
+// echo "<br>";
+// echo gemmideldeWaarde(-5,5);
+// echo "<br>";
+
+// echo biggestNumber(5,10);
+// echo "<br>";
+// echo biggestNumber(10,5);
+// echo "<br>";
+// echo biggestNumber(3,3);
+// echo "<br>";
+// echo SmallestNumber(5,10);
+// echo "<br>";
+// echo SmallestNumber(10,5);
+// echo "<br>";
+// echo SmallestNumber(3,3);
+?>
+
+<?php
+    // function MaakKoffie($type = "", $aantal = 1)
+    // {
+    //     $type = ($type == "" ? "Cappuchino" : $type);
+    //     return "Maak $aantal kop koffie van het type $type.<br>";
+    // }
+
+    // echo MaakKoffie(Irish,5);
+?>
+
+<!-- <form action="index.php" method="POST">
+    <input type="number" name="number1" placeholder = "number 1">
+    <input type="number" name="number2" placeholder = "number 2">
+    <input type="submit" name="submit" value="display list">
+</form> -->
+
+<?php
+// $number1 = $_POST["number1"];
+// $number2 = $_POST["number2"];
+
+// if ($number1 > $number2)
+// {
+//     $temp = $number2;
+//     $number2 = $number1;
+//     $number1 = $temp;
+// }
+
+// for ($getal = $number1; $getal <= $number2; $getal++)
+// {    
+//     echo $getal;
+//     echo ($getal % 2 == 0 ? "E" : "");
+//     echo ($getal < $number2 ? "," : ".");
+// }
+?>
+
+    <section id="header">
         <div class="header-container">
             <h1>Hypertext Preprocessor</h1>
             <h2>Examples in worming your way trough the slog of trying to understand a 25 year old language.</h2>
@@ -33,7 +121,7 @@
     </section>
 
     <div class="container-fluid">
-        <div class="row">
+        <div class="row spacertop100 spacerbottom100">
             <div class="col-lg-4">
                 <div class="card m-5" style="">
                     <img class="card-img-top" src="./img/faq-background.jpeg" alt="Card image cap">
@@ -82,9 +170,9 @@
     </section>
 
     <div class="container-fluid">
-        <div class="row">
-            <div class="col-lg-4">
-                <div class="card m-5" style="">
+        <div class="row spacertop100 spacerbottom100">
+            <div class="col-lg-3">
+                <div class="card m-5 p-3" style="">
                     <img class="card-img-top" src="./img/faq-background.jpeg" alt="Card image cap">
                     <p class="card-text">
                     <?php
@@ -105,9 +193,8 @@
                     </p>
                 </div>
             </div>
-            <div class="col-lg-4">
-                <div class="card m-5" style="">
-                    <img class="card-img-top" src="./img/faq-background.jpeg" alt="Card image cap">
+            <div class="col-lg-5">
+                <div class="card m-5 p-3" style="">
                     <p class="card-text">
                     <?php
                         $myTextFile = "php-code-snippet-1.txt";
@@ -130,8 +217,7 @@
                 </div>
             </div>
             <div class="col-lg-4">
-                <div class="card m-5" style="">
-                    <img class="card-img-top" src="./img/faq-background.jpeg" alt="Card image cap">
+                <div class="card m-5 p-3" style="">
                     <p class="card-text">First we start by opening the &lt?php tag.</p>
                     <p class="card-text">Then we start by defining a variable named $FirstName.</p>
                     <p class="card-text">We give that variable the content of "Jeroen".</p>
@@ -158,9 +244,9 @@
     </section>
 
     <div class="container-fluid">
-        <div class="row">
-            <div class="col-lg-4">
-                <div class="card m-5" style="">
+        <div class="row spacertop100 spacerbottom100">
+            <div class="col-lg-3">
+                <div class="card m-5 p-3" style="">
                     <img class="card-img-top" src="./img/faq-background.jpeg" alt="Card image cap">
                     <p class="card-text">
                     <h5>optellen</h5>
@@ -193,9 +279,8 @@
                     </p>
                 </div>
             </div>
-            <div class="col-lg-4">
-                <div class="card m-5" style="">
-                    <img class="card-img-top" src="./img/faq-background.jpeg" alt="Card image cap">
+            <div class="col-lg-5">
+                <div class="card m-5 p-3" style="">
                     <p class="card-text">
                     <?php
                         $myTextFile = "php-code-snippet-2.txt";
@@ -218,8 +303,7 @@
                 </div>
             </div>
             <div class="col-lg-4">
-                <div class="card m-5" style="">
-                    <img class="card-img-top" src="./img/faq-background.jpeg" alt="Card image cap">
+                <div class="card m-5 p-3" style="">
                     <p class="card-text">First we start by opening the &lt?php tag.</p>
                     <p class="card-text">Then we start by defining a variable named $num1.</p>
                     <p class="card-text">We give that variable the content of 5.</p>
@@ -246,9 +330,9 @@
     </section>
 
     <div class="container-fluid">
-        <div class="row">
-            <div class="col-lg-4">
-                <div class="card m-5" style="">
+        <div class="row spacertop100 spacerbottom100">
+            <div class="col-lg-3">
+                <div class="card m-5 p-3" style="">
                     <img class="card-img-top" src="./img/faq-background.jpeg" alt="Card image cap">
                     <p class="card-text">
 
@@ -304,9 +388,8 @@
                     </p>
                 </div>
             </div>
-            <div class="col-lg-4">
-                <div class="card m-5" style="">
-                    <img class="card-img-top" src="./img/faq-background.jpeg" alt="Card image cap">
+            <div class="col-lg-5">
+                <div class="card m-5 p-3" style="">
                     <p class="card-text">
                     <?php
                         $myTextFile = "php-code-snippet-3.txt";
@@ -329,8 +412,7 @@
                 </div>
             </div>
             <div class="col-lg-4">
-                <div class="card m-5" style="">
-                    <img class="card-img-top" src="./img/faq-background.jpeg" alt="Card image cap">
+                <div class="card m-5 p-3" style="">
                     <p class="card-text">First we start by opening the &lt?php tag.</p>
                     <p class="card-text">Then we start by defining a variable named $num1.</p>
                     <p class="card-text">We give that variable the content of 5.</p>
@@ -354,90 +436,40 @@
             <div class="row">
             <div class="col-lg-12 text-center">
                 <h1>"Time for the truly advanced stuff...</h1>
-                <h1>Let's do math with user input..."</h1>
+                <h1>Let's do something with user input..."</h1>
             </div>
             </div>
         </div>
     </section>
 
     <div class="container-fluid">
-        <div class="row">
+        <div class="row spacertop100 spacerbottom100">
             <div class="col-lg-3">
-                <div class="card m-5" style="">
+                <div class="card m-5 p-3" style="">
                     <img class="card-img-top" src="./img/faq-background.jpeg" alt="Card image cap">
                     <p class="card-text">
-                        <h2>User inputted php math functions</h2>
-                        <h5>Mutaties</h5>
-                        <form action="index.php" method="post">
-                        <input id="num1" type="number" name="num1" placeholder = "getal 1">
-                        <input id="num2" type="number" name="num2" placeholder = "getal 2">
-                        <input type="submit" name="submit" value="Calculate">
+                        <h2>User inputted php count functions</h2>
+                        <form action="index.php" method="POST">
+                            <input type="number" name="number1" placeholder = "number 1">
+                            <br>
+                            <input type="number" name="number2" placeholder = "number 2">
+                            <br>
+                            <input type="submit" name="submit" value="display list">
                         </form>
 
-                        <br>
                         <?php
-                        $num1 = $_POST["num1"];
-                        $num2 = $_POST["num2"];
-
-                        function optellen($getal1,$getal2)
+                        $number1 = $_POST["number1"];
+                        $number2 = $_POST["number2"];
+                        for($getal = $number1; $getal <= $number2; $getal++)
                         {
-                            global $result;
-                            $result = $getal1 + $getal2;
+                            echo "$getal <br>";
                         }
-                        optellen($num1,$num2);
-                        echo "Resultaat van de berekening" . " " . $num1 . " + " . $num2 . " = " . $result;
-                        ?>
-
-                        <br>
-
-                        <?php
-                        $num1 = $_POST["num1"];
-                        $num2 = $_POST["num2"];
-
-                        function aftrekken($getal1,$getal2)
-                        {
-                            global $result;
-                            $result = $getal1 - $getal2;
-                        }
-                        aftrekken($num1,$num2);
-                        echo "Resultaat van de berekening" . " " . $num1 . " - " . $num2 . " = " . $result;
-                        ?>
-
-                        <br>
-
-                        <?php
-                        $num1 = $_POST["num1"];
-                        $num2 = $_POST["num2"];
-
-                        function vermenigvuldigen($getal1,$getal2)
-                        {
-                            global $result;
-                            $result = $getal1 * $getal2;
-                        }
-                        vermenigvuldigen($num1,$num2);
-                        echo "Resultaat van de berekening" . " " . $num1 . " x " . $num2 . " = " . $result;
-                        ?>
-
-                        <br>
-
-                        <?php
-                        $num1 = $_POST["num1"];
-                        $num2 = $_POST["num2"];
-
-                        function delen($getal1,$getal2)
-                        {
-                            global $result;
-                            $result = $getal1 / $getal2;
-                        }
-                        delen($num1,$num2);
-                        echo "Resultaat van de berekening" . " " . $num1 . " / " . $num2 . " = " . $result;
                         ?>
                     </p>
                 </div>
             </div>
-            <div class="col-lg-6">
-                <div class="card m-5" style="">
-                    <img class="card-img-top" src="./img/faq-background.jpeg" alt="Card image cap">
+            <div class="col-lg-5">
+                <div class="card m-5 p-3" style="">
                     <p class="card-text">
                     <?php
                         $myTextFile = "php-code-snippet-4.txt";
@@ -459,20 +491,22 @@
                     </p>
                 </div>
             </div>
-            <div class="col-lg-3">
-                <div class="card m-5" style="">
-                    <img class="card-img-top" src="./img/faq-background.jpeg" alt="Card image cap">
+            <div class="col-lg-4">
+                <div class="card m-5 p-3" style="">
+                    <p class="card-text">First we start by creating a form with input fields.</p>
+                    <p class="card-text">With method="post" we send it to action="index.php".</p>
+                    <p class="card-text">Rearding php we make an opening tag.</p>
+                    <p class="card-text">We define variables $number1 and make it equal to the number1 we got from $_POST</p>
                     <p class="card-text">First we start by opening the &lt?php tag.</p>
-                    <p class="card-text">Then we start by defining a variable named $num1.</p>
-                    <p class="card-text">We give that variable the content of 5.</p>
+                    <p class="card-text">Then we start by defining a variable named $number1.</p>
+                    <p class="card-text">We give that variable the content $_POST["number1"].</p>
                     <p class="card-text">We do this for all the variables.</p>
-                    <p class="card-text">We create a function called add.</p>
-                    <p class="card-text">We give it empty placeholder variables as named $number1 and $number2.</p>
-                    <p class="card-text">Inside the variable we creat a global variable called $result.</p>
-                    <p class="card-text">We then define $result as the $number1 + $number2.</p>
-                    <p class="card-text">Outside the function we get to call forth the function named add.</p>
-                    <p class="card-text">And we tell it to substitute the empty variables $number1 and $number2 with the content of variable $num1 and $num2.</p>
-                    <p class="card-text">We then echo the $result variable.</p>
+                    <p class="card-text">We then start the loop.</p>
+                    <p class="card-text">We create a variable named $getal and give it the content of user inputted $number1.</p>
+                    <p class="card-text">Then we ask if it's smaller or equal to $number2.</p>
+                    <p class="card-text">If so add 1 to $getal with $getal++.</p>
+                    <p class="card-text">And subsequently excecute the directive echo $getal1.</p>
+                    <p class="card-text">Should $getal be bigger than $number 2 stop excecuting the function and start the next part of the programm.</p>
                     <p class="card-text">The end is always a php end tag. Like this ?></p>
                 </div>
             </div>
@@ -490,57 +524,119 @@
         </div>
     </section>
 
-    <br /><br />
-    <h2>PHP statements</h2>
-    <h5>kortingen en toeslagen</h5>
+    <div class="container-fluid">
+        <div class="row spacertop100 spacerbottom100">
+            <div class="col-lg-3">
+                <div class="card m-5 p-3" style="">
+                    <img class="card-img-top" src="./img/faq-background.jpeg" alt="Card image cap">
+                    <p class="card-text">
+                        <h2>PHP statements</h2>
+                        <h5>kortingen en toeslagen</h5>
+                        <form action="index.php" method="post">
+                            <input id="naamKoper" type="text" name="naamKoper" placeholder = "uw naam">
+                            <input id="leeftijdKoper" type="number" name="leeftijdKoper" placeholder = "uw leeftijd">
+                            <input id="woonplaatsKoper" type="text" name="woonplaatsKoper" placeholder = "uw woonplaats">    
+                            <input type="submit" name="submit" value="Bereken uw prijs">
+                        </form>
 
-    <h5>personalia koper</h5>
-    <form action="index.php" method="post">
-    <input id="naamKoper" type="text" name="naamKoper" placeholder = "uw naam">
-    <input id="leeftijdKoper" type="number" name="leeftijdKoper" placeholder = "uw leeftijd">
-    <input id="woonplaatsKoper" type="text" name="woonplaatsKoper" placeholder = "uw woonplaats">    
-    <input type="submit" name="submit" value="Bereken uw prijs">
-    </form>
+                         <?php
+                            //startwaarden
+                            $prijsArtikel = 100;
+                            $naamKoper = $_POST["naamKoper"];
+                            //naamKoper
+                            $leeftijdKoper = $_POST["leeftijdKoper"];
+                            //$leeftijdKoper = 70;
+                            $teBetalen = $prijsArtikel;
+                            $woonplaatsKoper = $_POST["woonplaatsKoper"];
+                            //$woonplaats = "Enschede";
 
-    <?php
-        //startwaarden
-        $prijsArtikel = 100;
-        $naamKoper = $_POST["naamKoper"];
-        //naamKoper
-        $leeftijdKoper = $_POST["leeftijdKoper"];
-        //$leeftijdKoper = 70;
-        $teBetalen = $prijsArtikel;
-        $woonplaatsKoper = $_POST["woonplaatsKoper"];
-        //$woonplaats = "Enschede";
+                            //alle bewerkingen
 
-        //alle bewerkingen
+                            if ($woonplaatsKoper == "Enschede")
+                            {
+                                $teBetalen = $prijsArtikel / 2;
+                            }
+                            else
+                            {
+                                if ($leeftijdKoper <= 18)
+                                    $toeslag = $prijsArtikel * 0.1;
 
-        if ($woonplaatsKoper == "Enschede")
-        {
-            $teBetalen = $prijsArtikel / 2;
-        }
-        else
-        {
-            if ($leeftijdKoper <= 18)
-                $toeslag = $prijsArtikel * 0.1;
+                                if ($leeftijdKoper >= 65)
+                                    $toeslag = $prijsArtikel * 0.05; 
+                                
+                                $teBetalen = $prijsArtikel + $toeslag;
+                            }
 
-            if ($leeftijdKoper >= 65)
-                $toeslag = $prijsArtikel * 0.05; 
-            
-            $teBetalen = $prijsArtikel + $toeslag;
-        }
+                            //alle output
+                            //verwacht iedereen 18 of jonger 10% korting
+                            //iedereen ouder dan 18 volledig betalen
+                            //iedereen 65of ouder 5% korting
+                            //iedereen woont in Enschede 2x zoveel betalen
+                            echo "Offerte <br>";
+                            echo "Naam koper: " . "$naamKoper<br>";
+                            echo "Leeftijd koper: " . "$leeftijdKoper<br>";
+                            echo "Woonplaats koper: " . "$woonplaatsKoper<br>";
+                            echo "Te betalen bedrag: " . "$teBetalen";
+                        ?>
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-5">
+                <div class="card m-5 p-3" style="">
+                    <p class="card-text">
+                    <?php
+                        $myTextFile = "php-code-snippet-5.txt";
+                        //vast stellen van de variabele. Aanroepen .txt bestand.
 
-        //alle output
-        //verwacht iedereen 18 of jonger 10% korting
-        //iedereen ouder dan 18 volledig betalen
-        //iedereen 65of ouder 5% korting
-        //iedereen woont in Enschede 2x zoveel betalen
-        echo "Offerte <br>";
-        echo "Naam koper: " . "$naamKoper<br>";
-        echo "Leeftijd koper: " . "$leeftijdKoper<br>";
-        echo "Woonplaats koper: " . "$woonplaatsKoper<br>";
-        echo "Te betalen bedrag: " . "$teBetalen";
-    ?>
+                        $textOutput = fopen($myTextFile, 'r');
+                        //zeggen dat hij .txt moet openen. En zet op read only.
+
+                        $theData = fread($textOutput, filesize($myTextFile));
+                        //zeggen dat hij hem moet lezen. De volledige lengte van het .txt bestand.
+
+                        fclose($textOutput);
+                        //zeggen dat hij moet stoppen met lezen .txt
+
+                        echo '<pre>' . htmlspecialchars ($theData) . '</pre>';
+                        //toepassen htmlspecialchars
+                        //uitspuugen van de $theData variabele (doorverwijst naar .txt)
+                    ?>
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card m-5 p-3" style="">
+                    <p class="card-text">First we start by creating a form with input fields.</p>
+                    <p class="card-text">With method="post" we send it to action="index.php".</p>
+                    <p class="card-text">First we start by opening the &lt?php tag.</p>
+                    <p class="card-text">The default value of $prijsArtikel will be set to 100. </p>
+                    <p class="card-text">We define variables $naamKoper and make it equal to the user input from $naamKoper we got from the form using $_POST.</p>
+                    <p class="card-text">This will be done for all other variables.</p>
+                    <p class="card-text">We then start the if statement. If the condition is true it will do the following.</p>
+                    <p class="card-text">In this example if $woonplaatsKoper is exact to "Enschede" the to be paid price will be halved.</p>
+                    <p class="card-text">We then start the loop.</p>
+                    <p class="card-text">We create a variable named $getal and give it the content of user inputted $number1.</p>
+                    <p class="card-text">Then we ask if it's smaller or equal to $number2.</p>
+                    <p class="card-text">If so add 1 to $getal with $getal++.</p>
+                    <p class="card-text">And subsequently excecute the directive echo $getal1.</p>
+                    <p class="card-text">Should $getal be bigger than $number 2 stop excecuting the function and start the next part of the programm.</p>
+                    <p class="card-text">The end is always a php end tag. Like this ?></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id="quotes">
+        <div class="container">
+            <div class="row">
+            <div class="col-lg-12 text-center">
+                <h1>"The next step in statements...</h1>
+                <h1>are for statements..."</h1>
+            </div>
+            </div>
+        </div>
+    </section>
+
 
     <br /><br />
     <h2>PHP for loops</h2>
