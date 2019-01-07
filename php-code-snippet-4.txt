@@ -1,0 +1,15 @@
+<form action="index.php" method="POST">
+    <input type="number" name="number1" placeholder = "number 1">
+    <input type="number" name="number2" placeholder = "number 2">
+    <input type="submit" name="submit" value="display list">
+</form>
+
+<?php
+    $number1 = $_POST["number1"];
+    $number2 = $_POST["number2"];
+
+    for($getal = $number1; $getal <= $number2; $getal++)
+    {
+        echo "$getal <br>";
+    }
+?>
