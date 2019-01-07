@@ -1,0 +1,15 @@
+<?php
+    $FirstName = "Jeroen";                      
+    $LastName = "Wichers";                       
+    $Age = "28";                                 
+    $PlaceOfResidence = "Enschede";              
+    $Email = "jwichers@hotmail.com";             
+    $Github = "https://github.com/JeroenArneWichers";  
+
+    echo "First name:$FirstName";                          
+    echo "Last name:$LastName"; 
+    echo "Age:$Age"; 
+    echo "Place of residence:$PlaceOfResidence"; 
+    echo "Email:$Email";
+    echo "Github:$Github";
+?>
