@@ -1,0 +1,80 @@
+.spacertop100 {
+    margin-top: 100px;
+}
+
+.spacerbottom100 {
+    margin-bottom: 100px;
+}
+
+#header {
+    width: 100%;
+    height: 100vh;
+    background: url(../img/header.jpeg) center center;
+    background-size: cover;
+    position: relative;
+    border-bottom: black 6px solid;
+  }
+
+#header .header-container {
+    position: absolute;
+    bottom: 15em;
+    top: 0;
+    left: 50em;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+  }
+
+#header h1 {
+    margin: 30px 0 10px 0;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 56px;
+    text-transform: uppercase;
+    color: black;
+  }
+
+#header h2 {
+    color: black;
+    margin-bottom: 50px;
+    font-size: 24px;
+  }
+
+#header .btn-calculate-your-options {
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding-top: 18px;
+    padding-bottom: 16px;
+    padding-left: 28px;
+    padding-right: 28px;
+    border-radius: 50px;
+    margin: 10px;
+    border: 2px solid black;
+    color: black;
+  }
+
+#header .btn-calculate-your-options:hover {
+    background: black;
+    color:white;
+    border: 2px solid white;
+  }
+
+#quotes {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/book-background.jpeg) fixed center center;
+    background-size: cover;
+    padding: 280px 0;
+    border-bottom: black solid 5px;
+    border-top: black solid 5px;
+    color: white;
+  }
+
+.custom-card-img{
+    width: 36em;
+    height: auto;
+}
