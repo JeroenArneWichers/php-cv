@@ -1,0 +1,23 @@
+<?php
+    $num1 = 5;
+    $num2 = 25;
+    echo $num1 + $num2;
+?>
+
+<?php
+    $num1 = 500;
+    $num2 = 250;
+    echo $num1 - $num2;
+?>
+
+<?php
+    $num1 = 70;
+    $num2 = 3;
+    echo $num1 * $num2;
+?>
+
+<?php
+    $num1 = 2100;
+    $num2 = 21;
+    echo $num1 / $num2;
+?>
