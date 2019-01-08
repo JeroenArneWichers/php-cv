@@ -1,0 +1,8 @@
+<?php
+    $icons = array ("Trump", "Hillary", "Bernie", "Pewdiepie");
+    $size = sizeof($icons);
+
+    for($i=$size-1; $i>=0; $i--){
+        echo $icons[$i] . "<br>";
+    }
+?>
