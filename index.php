@@ -14,19 +14,6 @@
   </head>
   <body>
 
-<?php
-// $fruit = array ("bananen", "appels", "peren", "sinasappels");
-
-// for($i=0; $i<count($fruit); $i++)
-// {
-// echo $fruit[$i] . "<br>";
-// }
-
-// for($i=(count($fruit)-1); $i>= 0; $i++)
-// {
-// echo $fruit[$i] . "<br>";
-// }
-?>
 
 <?php
 // function biggestNumber($number1, $number2)
@@ -630,74 +617,381 @@
         <div class="container">
             <div class="row">
             <div class="col-lg-12 text-center">
-                <h1>"The next step in statements...</h1>
-                <h1>are for statements..."</h1>
+                <h1>"The next step in php...</h1>
+                <h1>are for loops..."</h1>
             </div>
             </div>
         </div>
     </section>
 
+    <div class="container-fluid">
+        <div class="row spacertop100 spacerbottom100">
+            <div class="col-lg-3">
+                <div class="card m-5 p-3" style="">
+                    <img class="card-img-top" src="./img/faq-background.jpeg" alt="Card image cap">
+                    <p class="card-text">
+                        <h2>PHP for loops</h2>
+                        <h5>Optellen van getallen</h5>
+                        <?php
+                        $totaal = 0;
 
-    <br /><br />
-    <h2>PHP for loops</h2>
-    <h5>optellen van getallen</h5>
+                        for ($getal = 1; $getal <= 5; $getal++)
+                        {
+                            $totaal = $totaal + $getal;
+                            echo "$getal <br>";
+                        }
+                        echo "eindresultaat:$totaal";
+                        ?>
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-5">
+                <div class="card m-5 p-3" style="">
+                    <p class="card-text">
+                    <?php
+                        $myTextFile = "php-code-snippet-6.txt";
+                        //vast stellen van de variabele. Aanroepen .txt bestand.
+
+                        $textOutput = fopen($myTextFile, 'r');
+                        //zeggen dat hij .txt moet openen. En zet op read only.
+
+                        $theData = fread($textOutput, filesize($myTextFile));
+                        //zeggen dat hij hem moet lezen. De volledige lengte van het .txt bestand.
+
+                        fclose($textOutput);
+                        //zeggen dat hij moet stoppen met lezen .txt
+
+                        echo '<pre>' . htmlspecialchars ($theData) . '</pre>';
+                        //toepassen htmlspecialchars
+                        //uitspuugen van de $theData variabele (doorverwijst naar .txt)
+                    ?>
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card m-5 p-3" style="">
+                    <p class="card-text">First we start by opening the &lt?php tag.</p>
+                    <p class="card-text">We create a variable named $total. We give it the value of 0. </p>
+                    <p class="card-text">We then start the loop.</p>
+                    <p class="card-text">We create a variable $getal and give it the value of 1. </p>
+                    <p class="card-text">Then we check if it's smaller or equal to the number of 5.</p>
+                    <p class="card-text">If so add 1 to the variable $getal and excecute the program further.</p>
+                    <p class="card-text">The variable $totaal will become $totaal + $getal. After each increment it will be displayed with echo.</p>
+                    <p class="card-text">Should $getal be bigger than 5 stop excecuting the function and start the next part of the programm.</p>
+                    <p class="card-text">In this case it's to display the latest $total with echo.</p>
+                    <p class="card-text">The end is always a php end tag. Like this ?></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id="quotes">
+        <div class="container">
+            <div class="row">
+            <div class="col-lg-12 text-center">
+                <h1>"For loops...</h1>
+                <h1>backwards counting..."</h1>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container-fluid">
+        <div class="row spacertop100 spacerbottom100">
+            <div class="col-lg-3">
+                <div class="card m-5 p-3" style="">
+                    <img class="card-img-top" src="./img/faq-background.jpeg" alt="Card image cap">
+                    <p class="card-text">
+                        <h2>PHP for loops</h2>
+                        <h5>Aftellen van getallen</h5>
+                        <?php
+                        $startwaarde = 5;
+                        $waarde = 0;
+                        for ($getal = 0; $getal <= 5; $getal++)
+                        {
+                            $waarde = $startwaarde--;
+                            echo "$waarde <br>";
+                        }
+                        ?>
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-5">
+                <div class="card m-5 p-3" style="">
+                    <p class="card-text">
+                    <?php
+                        $myTextFile = "php-code-snippet-7.txt";
+                        //vast stellen van de variabele. Aanroepen .txt bestand.
+
+                        $textOutput = fopen($myTextFile, 'r');
+                        //zeggen dat hij .txt moet openen. En zet op read only.
+
+                        $theData = fread($textOutput, filesize($myTextFile));
+                        //zeggen dat hij hem moet lezen. De volledige lengte van het .txt bestand.
+
+                        fclose($textOutput);
+                        //zeggen dat hij moet stoppen met lezen .txt
+
+                        echo '<pre>' . htmlspecialchars ($theData) . '</pre>';
+                        //toepassen htmlspecialchars
+                        //uitspuugen van de $theData variabele (doorverwijst naar .txt)
+                    ?>
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card m-5 p-3" style="">
+                    <p class="card-text">First we start by opening the &lt?php tag.</p>
+                    <p class="card-text">We create a variable named $startwaarde. We give it the value of 5. This is the begin of the countdown.</p>
+                    <p class="card-text">We create a variable named $waarde. We give it the value of 0. </p>
+                    <p class="card-text">We then start the loop.</p>
+                    <p class="card-text">We create a variable $getal and give it the value of 0. </p>
+                    <p class="card-text">Then we check if it's smaller or equal to the number of 5.</p>
+                    <p class="card-text">If so add 1 to the variable $getal and excecute the program further.</p>
+                    <p class="card-text">The variable $waarde will become $startwaarde--. The value of startwaarde - 1.</p>
+                    <p class="card-text">It wil then be displayed using echo.</p>
+                    <p class="card-text">Should $getal be bigger than 5 stop excecuting the function and start the next part of the programm.</p>
+                    <p class="card-text">The end is always a php end tag. Like this ?></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id="quotes">
+        <div class="container">
+            <div class="row">
+            <div class="col-lg-12 text-center">
+                <h1>"While loops...</h1>
+                <h1>counting up..."</h1>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container-fluid">
+        <div class="row spacertop100 spacerbottom100">
+            <div class="col-lg-3">
+                <div class="card m-5 p-3" style="">
+                    <img class="card-img-top" src="./img/faq-background.jpeg" alt="Card image cap">
+                    <p class="card-text">
+                        <h2>PHP for while loops</h2>
+                        <h5>Optellen van getallen</h5>
+                        <?php
+                        //init
+                        $getal = 1;
+                        $totaal = 0;
+                        //loop
+                        while($getal <= 5)
+                        {
+                            //waarde berekenen
+                            $totaal = $totaal + $getal;
+                            //debug info
+                            echo "$getal <br>";
+                            //verhoog teller
+                            $getal++;
+                        }
+                        //output result
+                        echo "eindresultaat:$totaal";
+                        ?>
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-5">
+                <div class="card m-5 p-3" style="">
+                    <p class="card-text">
+                    <?php
+                        $myTextFile = "php-code-snippet-8.txt";
+                        //vast stellen van de variabele. Aanroepen .txt bestand.
+
+                        $textOutput = fopen($myTextFile, 'r');
+                        //zeggen dat hij .txt moet openen. En zet op read only.
+
+                        $theData = fread($textOutput, filesize($myTextFile));
+                        //zeggen dat hij hem moet lezen. De volledige lengte van het .txt bestand.
+
+                        fclose($textOutput);
+                        //zeggen dat hij moet stoppen met lezen .txt
+
+                        echo '<pre>' . htmlspecialchars ($theData) . '</pre>';
+                        //toepassen htmlspecialchars
+                        //uitspuugen van de $theData variabele (doorverwijst naar .txt)
+                    ?>
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card m-5 p-3" style="">
+                    <p class="card-text">First we start by opening the &lt?php tag.</p>
+                    <p class="card-text">We create a variable named $getal. We give it the value of 1. This is the start.</p>
+                    <p class="card-text">We create a variable named $total. We give it the value of 0. </p>
+                    <p class="card-text">We then start the loop with the condition.</p>
+                    <p class="card-text">For as long as $getal is smaller or equal to 5 the function is excecuted.</p>
+                    <p class="card-text">The $totaal is the sum of $totaal and $getal.</p>
+                    <p class="card-text">We then echo the content of $getal (which is 1 at start). And then add 1 with $getal++.</p>
+                    <p class="card-text">Should $getal become greater than 5 it will stop the function adn excecute the next part.</p>
+                    <p class="card-text">The new $totaal will be displayed using echo.</p>
+                    <p class="card-text">The end is always a php end tag. Like this ?></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id="quotes">
+        <div class="container">
+            <div class="row">
+            <div class="col-lg-12 text-center">
+                <h1>"And now for something...</h1>
+                <h1>completly different..."</h1>
+                <h1>Arrays..."</h1>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container-fluid">
+        <div class="row spacertop100 spacerbottom100">
+            <div class="col-lg-3">
+                <div class="card m-5 p-3" style="">
+                    <img class="card-img-top" src="./img/faq-background.jpeg" alt="Card image cap">
+                    <p class="card-text">
+                        <h2>Display content of an array</h2>
+                        <?php
+                        $icons = array ("Trump", "Hillary", "Bernie", "Pewdiepie");
+
+                        for($i=0; $i<count($icons); $i++)
+                        {
+                        echo $icons[$i] . "<br>";
+                        }
+                        ?>
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-5">
+                <div class="card m-5 p-3" style="">
+                    <p class="card-text">
+                    <?php
+                        $myTextFile = "php-code-snippet-9.txt";
+                        //vast stellen van de variabele. Aanroepen .txt bestand.
+
+                        $textOutput = fopen($myTextFile, 'r');
+                        //zeggen dat hij .txt moet openen. En zet op read only.
+
+                        $theData = fread($textOutput, filesize($myTextFile));
+                        //zeggen dat hij hem moet lezen. De volledige lengte van het .txt bestand.
+
+                        fclose($textOutput);
+                        //zeggen dat hij moet stoppen met lezen .txt
+
+                        echo '<pre>' . htmlspecialchars ($theData) . '</pre>';
+                        //toepassen htmlspecialchars
+                        //uitspuugen van de $theData variabele (doorverwijst naar .txt)
+                    ?>
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card m-5 p-3" style="">
+                    <p class="card-text">First we start by opening the &lt?php tag.</p>
+                    <p class="card-text">We create a variable named $icons. We declare it to be an array.</p>
+                    <p class="card-text">The content of the array will be strings with text in them seperated by a comma.</p>
+                    <p class="card-text">We then start the loop.</p>
+                    <p class="card-text">The variable $i will be set at 0.</p>
+                    <p class="card-text">We then tell it to count the number of elements in the array. (in this case 4).</p>
+                    <p class="card-text">Then the number of $i will be compared to the content of $icons.</p>
+                    <p class="card-text">For as long as the conditions are fullfilled the code will be excecuted.</p>
+                    <p class="card-text">The content of the array will be desplayed with echo.</p>
+                    <p class="card-text">The end is always a php end tag. Like this ?></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id="quotes">
+        <div class="container">
+            <div class="row">
+            <div class="col-lg-12 text-center">
+                <h1>"And now for something...</h1>
+                <h1>completly different..."</h1>
+                <h1>Arrays in reverse..."</h1>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container-fluid">
+        <div class="row spacertop100 spacerbottom100">
+            <div class="col-lg-3">
+                <div class="card m-5 p-3" style="">
+                    <img class="card-img-top" src="./img/faq-background.jpeg" alt="Card image cap">
+                    <p class="card-text">
+                        <h2>Display content of an array</h2>
+                        <?php
+                        $icons = array ("Trump", "Hillary", "Bernie", "Pewdiepie");
+                        $size = sizeof($icons);
+
+                        for($i=$size-1; $i>=0; $i--){
+                            echo $icons[$i] . "<br>";
+                        }
+                        ?>
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-5">
+                <div class="card m-5 p-3" style="">
+                    <p class="card-text">
+                    <?php
+                        $myTextFile = "php-code-snippet-10.txt";
+                        //vast stellen van de variabele. Aanroepen .txt bestand.
+
+                        $textOutput = fopen($myTextFile, 'r');
+                        //zeggen dat hij .txt moet openen. En zet op read only.
+
+                        $theData = fread($textOutput, filesize($myTextFile));
+                        //zeggen dat hij hem moet lezen. De volledige lengte van het .txt bestand.
+
+                        fclose($textOutput);
+                        //zeggen dat hij moet stoppen met lezen .txt
+
+                        echo '<pre>' . htmlspecialchars ($theData) . '</pre>';
+                        //toepassen htmlspecialchars
+                        //uitspuugen van de $theData variabele (doorverwijst naar .txt)
+                    ?>
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card m-5 p-3" style="">
+                    <p class="card-text">First we start by opening the &lt?php tag.</p>
+                    <p class="card-text">We create a variable named $icons. We declare it to be an array.</p>
+                    <p class="card-text">The content of the array will be strings with text in them seperated by a comma.</p>
+                    <p class="card-text">We then start the loop.</p>
+                    <p class="card-text">The variable $i will be set at 0.</p>
+                    <p class="card-text">We then tell it to count the number of elements in the array. (in this case 4).</p>
+                    <p class="card-text">Then the number of $i will be compared to the content of $icons.</p>
+                    <p class="card-text">For as long as the conditions are fullfilled the code will be excecuted.</p>
+                    <p class="card-text">The content of the array will be desplayed with echo.</p>
+                    <p class="card-text">The end is always a php end tag. Like this ?></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <?php
-    $totaal = 0;
+    $icons = array ("Trump", "Hillary", "Bernie", "Pewdiepie");
+    $size = sizeof($icons);
 
-    for ($getal = 1; $getal <= 5; $getal++)
-    {
-        $totaal = $totaal + $getal;
-        echo "$getal <br>";
+    for($i=$size-1; $i>=0; $i--){
+        echo $icons[$i] . "<br>";
     }
-    echo "eindresultaat:$totaal";
     ?>
 
-    <br><br>
-    <h5>aftellen van 10 naar 0</h5>
 
-    <?php
-    $startwaarde = 10;
-    $waarde = 0;
-    for ($getal = 0; $getal <= 10; $getal++)
-    {
-        $waarde = $startwaarde--;
-        echo "$waarde <br>";
-    }
-    ?>
 
-    <br /><br />
-    <h5>getallen oplopend van 0 naar 20 in sprongen van 2</h5>
+    
 
-    <?php
-    $waarde = 0;
-    for($getal = 0; $getal <=20; $getal++)
-    {
-        $startwaarde = $getal++;
-        echo "$startwaarde <br>";
-    }
-    ?>
 
-    <br /><br />
-    <h2>PHP for while loops</h2>
-    <h5>optellen van getallen</h5>
 
-    <?php
-    //init
-    $getal = 1;
-    $totaal = 0;
-    //loop
-    while($getal <= 5)
-    {
-        //waarde berekenen
-        $totaal = $totaal + $getal;
-        //debug info
-        echo "$getal <br>";
-        //verhoog teller
-        $getal++;
-    }
-    //output result
-    echo "eindresultaat:$totaal";
-    ?>
+    
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
