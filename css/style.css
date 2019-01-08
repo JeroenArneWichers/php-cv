@@ -1,3 +1,43 @@
+header {
+  position: relative;
+  background-color: black;
+  height: 100vh;
+  min-height: 25rem;
+  width: 100%;
+  overflow: hidden;
+}
+
+header video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 0;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+
+header .container {
+  position: relative;
+  z-index: 2;
+}
+
+header .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0.5;
+  z-index: 1;
+}
+
 .spacertop100 {
     margin-top: 100px;
 }
@@ -34,11 +74,11 @@
     font-weight: 700;
     line-height: 56px;
     text-transform: uppercase;
-    color: black;
+    color: white;
   }
 
 #header h2 {
-    color: black;
+    color: white
     margin-bottom: 50px;
     font-size: 24px;
   }
@@ -55,8 +95,8 @@
     padding-right: 28px;
     border-radius: 50px;
     margin: 10px;
-    border: 2px solid black;
-    color: black;
+    border: 2px solid white;
+    color: white;
   }
 
 #header .btn-calculate-your-options:hover {
@@ -68,7 +108,7 @@
 #quotes {
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/book-background.jpeg) fixed center center;
     background-size: cover;
-    padding: 280px 0;
+    padding: 100px 0;
     border-bottom: black solid 5px;
     border-top: black solid 5px;
     color: white;
