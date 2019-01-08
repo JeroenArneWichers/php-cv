@@ -1,0 +1,9 @@
+<?php
+    $startwaarde = 5;
+    $waarde = 0;
+    for ($getal = 0; $getal <= 5; $getal++)
+    {
+        $waarde = $startwaarde--;
+        echo "$waarde <br>";
+    }
+?>
