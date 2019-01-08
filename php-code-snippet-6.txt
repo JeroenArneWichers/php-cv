@@ -1,0 +1,10 @@
+<?php
+    $totaal = 0;
+
+    for ($getal = 1; $getal <= 5; $getal++)
+    {
+        $totaal = $totaal + $getal;
+        echo "$getal <br>";
+    }
+    echo "eindresultaat:$totaal";
+?>
