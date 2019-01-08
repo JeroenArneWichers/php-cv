@@ -13,88 +13,30 @@
     <title>php cv</title>
   </head>
   <body>
-
-
-<?php
-// function biggestNumber($number1, $number2)
-// {
-//     return ($number1 >= $number2 ? $number1 : $number2);
-// }
-
-// function SmallestNumber($number1, $number2)
-// {
-//     return ($number1 <= $number2 ? $number1 : $number2);
-// }
-
-// function gemmideldeWaarde($number1, $number2)
-// {
-//     return ($number1 + $number2) / 2;
-// }
-
-// echo gemmideldeWaarde(5,10);
-// echo "<br>";
-// echo gemmideldeWaarde(2,2);
-// echo "<br>";
-// echo gemmideldeWaarde(2.5,3);
-// echo "<br>";
-// echo gemmideldeWaarde(-5,5);
-// echo "<br>";
-
-// echo biggestNumber(5,10);
-// echo "<br>";
-// echo biggestNumber(10,5);
-// echo "<br>";
-// echo biggestNumber(3,3);
-// echo "<br>";
-// echo SmallestNumber(5,10);
-// echo "<br>";
-// echo SmallestNumber(10,5);
-// echo "<br>";
-// echo SmallestNumber(3,3);
-?>
-
-<?php
-    // function MaakKoffie($type = "", $aantal = 1)
-    // {
-    //     $type = ($type == "" ? "Cappuchino" : $type);
-    //     return "Maak $aantal kop koffie van het type $type.<br>";
-    // }
-
-    // echo MaakKoffie(Irish,5);
-?>
-
-<!-- <form action="index.php" method="POST">
-    <input type="number" name="number1" placeholder = "number 1">
-    <input type="number" name="number2" placeholder = "number 2">
-    <input type="submit" name="submit" value="display list">
-</form> -->
-
-<?php
-// $number1 = $_POST["number1"];
-// $number2 = $_POST["number2"];
-
-// if ($number1 > $number2)
-// {
-//     $temp = $number2;
-//     $number2 = $number1;
-//     $number1 = $temp;
-// }
-
-// for ($getal = $number1; $getal <= $number2; $getal++)
-// {    
-//     echo $getal;
-//     echo ($getal % 2 == 0 ? "E" : "");
-//     echo ($getal < $number2 ? "," : ".");
-// }
-?>
-
-    <section id="header">
+    <!-- <section id="header">
         <div class="header-container">
             <h1>Hypertext Preprocessor</h1>
             <h2>Examples in worming your way trough the slog of trying to understand a 25 year old language.</h2>
             <a href="" class="btn-calculate-your-options">Let's get started</a>
         </div>
-    </section>
+    </section> -->
+    <section id="header">
+		<header>
+		  <div class="overlay"></div>
+		  <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+			<source src="video/code-background.mp4" type="video/mp4">
+		  </video>
+		  <div class="container h-100">
+			<div class="d-flex h-100 text-center align-items-center">
+			  <div class="w-100 text-white">
+                <h1>Hypertext Preprocessor</h1>
+                <h2>Examples in worming your way trough the slog of trying to understand a 25 year old language.</h2>
+                <a href="" class="btn-calculate-your-options">Let's get started</a>
+			  </div>
+			</div>
+		  </div>
+		</header>
+	</section>
 
     <section id="quotes">
         <div class="container">
@@ -111,7 +53,7 @@
         <div class="row spacertop100 spacerbottom100">
             <div class="col-lg-4">
                 <div class="card m-5" style="">
-                    <img class="card-img-top" src="./img/faq-background.jpeg" alt="Card image cap">
+                    <img class="card-img-top" src="./img/danish-canadian-flag.png" alt="Card image cap">
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item">PHP was originally created by a Danish-Canadian programmer named Rasmus Lerdorf.</li>
                         <li class="list-group-item">Although the stable release of PHP only happened on April 12, 2017, it has been around for twenty-five years, as it was first developed in 1994.</li>
@@ -122,7 +64,7 @@
             </div>
             <div class="col-lg-4">
                 <div class="card m-5" style="">
-                    <img class="card-img-top" src="./img/faq-background.jpeg" alt="Card image cap">
+                    <img class="card-img-top" src="./img/header.jpeg" alt="Card image cap">
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item">It was not until 1997 that PHP became “Hypertext Preprocessor”. Zeev Suraski and Andi Gutmans rewrote the original software component (parser) forming the base for PHP 3.</li>
                         <li class="list-group-item">The core of PHP was rewritten by Suraski and Gutmans. Zend Engine was produced in 1999. The new and changed PHP was then released in May 2000, powered by Zend Engine 1.0.</li>
@@ -133,7 +75,7 @@
             </div>
             <div class="col-lg-4">
                 <div class="card m-5" style="">
-                    <img class="card-img-top" src="./img/faq-background.jpeg" alt="Card image cap">
+                    <img class="card-img-top" src="./img/brands.jpeg" alt="Card image cap">
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item">If Netcraft’s web survey from 2013 is correct, there are 244 million websites, approximately,  that are running PHP. This number must have grown since 2013.</li>
                         <li class="list-group-item">With PHP 7, PHP is ready for the next generation. The performance of PHP was improved through refactoring. It was authored by Xinchen Hui, Nikita Popov, and Dmitry Stogov.</li>
@@ -924,7 +866,7 @@
                 <div class="card m-5 p-3" style="">
                     <img class="card-img-top" src="./img/faq-background.jpeg" alt="Card image cap">
                     <p class="card-text">
-                        <h2>Display content of an array</h2>
+                        <h2>Display content of an array in reverse</h2>
                         <?php
                         $icons = array ("Trump", "Hillary", "Bernie", "Pewdiepie");
                         $size = sizeof($icons);
@@ -962,36 +904,113 @@
             <div class="col-lg-4">
                 <div class="card m-5 p-3" style="">
                     <p class="card-text">First we start by opening the &lt?php tag.</p>
-                    <p class="card-text">We create a variable named $icons. We declare it to be an array.</p>
-                    <p class="card-text">The content of the array will be strings with text in them seperated by a comma.</p>
-                    <p class="card-text">We then start the loop.</p>
-                    <p class="card-text">The variable $i will be set at 0.</p>
-                    <p class="card-text">We then tell it to count the number of elements in the array. (in this case 4).</p>
-                    <p class="card-text">Then the number of $i will be compared to the content of $icons.</p>
-                    <p class="card-text">For as long as the conditions are fullfilled the code will be excecuted.</p>
-                    <p class="card-text">The content of the array will be desplayed with echo.</p>
+                    <p class="card-text">.</p>
+                    <p class="card-text">.</p>
+                    <p class="card-text">.</p>
+                    <p class="card-text">.</p>
+                    <p class="card-text">.</p>
+                    <p class="card-text">.</p>
+                    <p class="card-text">.</p>
+                    <p class="card-text">.</p>
                     <p class="card-text">The end is always a php end tag. Like this ?></p>
                 </div>
             </div>
         </div>
     </div>
 
-    <?php
-    $icons = array ("Trump", "Hillary", "Bernie", "Pewdiepie");
-    $size = sizeof($icons);
 
-    for($i=$size-1; $i>=0; $i--){
-        echo $icons[$i] . "<br>";
-    }
-    ?>
+    <section id="quotes">
+        <div class="container">
+            <div class="row">
+            <div class="col-lg-12 text-center">
+                <h1>"Let's end with something...</h1>
+                <h1>truly special..."</h1>
+                <h1>User contact form..."</h1>
+                <h5>(that writes the data to a .txt and can be retrieved again.)</h5>
+            </div>
+            </div>
+        </div>
+    </section>
 
+        <div class="container-fluid">
+        <div class="row spacertop100 spacerbottom100">
+            <div class="col-lg-3">
+                <div class="card m-5 p-3" style="">
+                    <img class="card-img-top" src="./img/faq-background.jpeg" alt="Card image cap">
+                    <p class="card-text">
+                        <h2>User contact form.</h2>
+                        <h5>(that creates .txt and can be called back again.)</h5>
+                        <form action="index.php" method="post">
+                            <input id="nameUser" type="text" name="nameUser" placeholder = "Your name..."><br>
+                            <input id="ageUser" type="number" name="ageUser" placeholder = "Your age..."><br>
+                            <input id="residenceUser" type="text" name="residenceUser" placeholder = "Your place of residence..."><br>    
+                            <input id="emailUser" type="text" name="emailUser" placeholder = "Your Email adress..."><br>
+                            <textarea id="messageUser" placeholder="Your message can be placed here..." cols="20" rows="5" name="messageUser"></textarea>
+                            <input type="submit" name="submit" value="Send message" onClick="return empty()">
+                        </form>
+                        <?php
+                            $name = $_POST['nameUser'];
+                            $age = $_POST['ageUser'];
+                            $residence = $_POST['residenceUser'];
+                            $email = $_POST['emailUser'];
+                            $message = $_POST['messageUser'];
+                            $fp = fopen("user-comments.txt", "w");
+                            $savestring = "User name:" . $name . "," . "<br/>" . "User age:" . $age . "," . "<br/>" . "User residence:" . $residence . "," . "<br/>" . "User Email:" . $email . "," . "<br/>" . "User message:" . $message;
+                            fwrite($fp, $savestring);
+                            fclose($fp);
 
+                            if (empty($name) && empty($age) && empty($residence) && empty($email) && empty($message)) 
+                            {
+                                echo "<br/>" . "Please input the fields correctly.";
+                                return false;
+                            }
+                        ?>
+                        <br/><h5>Your comment was:</h5>
+                        <?php
+                            echo file_get_contents( "user-comments.txt" ); // get the contents, and echo it out.
+                        ?>    
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-5">
+                <div class="card m-5 p-3" style="">
+                    <p class="card-text">
+                    <?php
+                        $myTextFile = "php-code-snippet-11.txt";
+                        //vast stellen van de variabele. Aanroepen .txt bestand.
 
-    
+                        $textOutput = fopen($myTextFile, 'r');
+                        //zeggen dat hij .txt moet openen. En zet op read only.
 
+                        $theData = fread($textOutput, filesize($myTextFile));
+                        //zeggen dat hij hem moet lezen. De volledige lengte van het .txt bestand.
 
+                        fclose($textOutput);
+                        //zeggen dat hij moet stoppen met lezen .txt
 
-    
+                        echo '<pre>' . htmlspecialchars ($theData) . '</pre>';
+                        //toepassen htmlspecialchars
+                        //uitspuugen van de $theData variabele (doorverwijst naar .txt)
+                    ?>
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card m-5 p-3" style="">
+                    <p class="card-text">First we start by opening the &lt?php tag.</p>
+                    <p class="card-text">.</p>
+                    <p class="card-text">.</p>
+                    <p class="card-text">.</p>
+                    <p class="card-text">.</p>
+                    <p class="card-text">.</p>
+                    <p class="card-text">.</p>
+                    <p class="card-text">.</p>
+                    <p class="card-text">.</p>
+                    <p class="card-text">The end is always a php end tag. Like this ?></p>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
