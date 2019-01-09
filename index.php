@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link href="css/style.css" rel="stylesheet">
 
+    <!-- animate on scroll -->	
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
     <!-- Title -->
     <title>php cv</title>
   </head>
@@ -1149,9 +1152,62 @@
                     <p class="card-text">
                         <h2>Roman legions</h2>
                         <h5>(based on selection variables)</h5>
+                        <br>
+
+                        <!-- Ik wil een provincie kunnen selecteren -->
+
+                        <h4>Please select the province</h4>
+                        <form action="index.php" method="POST">
+                        <select select name="province">
+                            <option select name="" value="Please select...">Please select...</option>
+                            <option select name="Africa" value="Africa">Africa</option>
+                            <option select name="Arabia" value="Arabia">Arabia</option>
+                            <option select name="Britannia" value="Britannia">Britannia</option>
+                        </select>
+                        </form>
+                        <br>
 
                         <?php
-                            
+
+                        //init variabelen/array
+
+                        $legion1 = array
+                        (
+                            "name" => "Legio III Augusta",
+                            "garrison" => "Africa",
+                            "foundationDate" => "41 bc",
+                            "briefHistory" => "Created by future Emperor Augustus."
+                        );
+
+                        $legion2 = array
+                        (
+                            "name" => "Legio III Cyrenaica",
+                            "garrison" => "Arabia",
+                            "foundationDate" => "36 bc",
+                            "briefHistory" => "Created by Marcus Antonius."
+                        );
+
+                        $legion3 = array
+                        (
+                            "name" => "Legio VI Victrix",
+                            "garrison" => "Britannia",
+                            "foundationDate" => "41 bc",
+                            "briefHistory" => "Created by future Emperor Augustus."
+                        );
+
+                        //ik wil kunnen filteren op basis van "garrison" (province).
+
+                        //ik wil alle bijkomende informatie van de bovenliggende array weergeven.
+
+
+                        //print_r($legion1);
+                        //
+
+                        $legion = $_POST["Africa"];
+
+                        echo $legion["name"] . "<br>" . $legion["garrison"] . "<br>" . $legion["foundationDate"] . "<br>" . $legion["briefHistory"];
+
+
                         ?>
                     </p>
                 </div>
@@ -1160,7 +1216,7 @@
                 <div class="card m-5 p-3" style="">
                     <p class="card-text">
                     <?php
-                        $myTextFile = "php-code-snippet-12.txt";
+                        $myTextFile = "php-code-snippet-13.txt";
                         //vast stellen van de variabele. Aanroepen .txt bestand.
 
                         $textOutput = fopen($myTextFile, 'r');
@@ -1181,14 +1237,14 @@
             </div>
             <div class="col-lg-4">
                 <div class="card m-5 p-3" style="">
-                    <p class="card-text">We already discussed creating a form. So you already know that.</p>
-                    <p class="card-text">Regarding the important part we first start by opening the &lt?php tagand setting the variables.</p>
-                    <p class="card-text">The variable $name will be filled with the content we get from the 'nameUser' input field we get from $_POST. </p>
-                    <p class="card-text">The next part is opening a .txt file named 'user-comments.txt'. If it doesn't exsist yet. No matter. fopen opens as well as creates the file. We use fopen for that. </p>
-                    <p class="card-text">After fopen we write a w. For writing to the file. If you wanted to append to it, thus saving the previous text you wrote to it, you would've written an a.</p>
-                    <p class="card-text">With $savestring you can set the variables (and other contents) that you want to write to the .txt file.</p>
-                    <p class="card-text">Then we have to tell php to actually write the $savestring to the .txt file.</p>
-                    <p class="card-text">In order to prevent empty field submission we make an if else statement. If the $name, $age etc are empty echo the corresponding string.</p>
+                    <p class="card-text">.</p>
+                    <p class="card-text">.</p>
+                    <p class="card-text">.</p>
+                    <p class="card-text">.</p>
+                    <p class="card-text">.</p>
+                    <p class="card-text">.</p>
+                    <p class="card-text">.</p>
+                    <p class="card-text">.</p>
                     <p class="card-text">If the variables are filled echo the content from user-comments.txt.</p>
                     <p class="card-text">The end is always a php end tag. Like this ?></p>
                 </div>
@@ -1203,15 +1259,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
   
     <script>
-        $("#submit").click(function() {
-        $(".element").each(function() {
-            if ($(this).attr("id") == $("#searchField").val()) {
-            $('html,body').animate({
-                scrollTop: $(this).offset().top
-            });
-            }
-        });
-    });
+	  AOS.init();
     </script>
   
   

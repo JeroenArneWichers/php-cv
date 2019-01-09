@@ -1,0 +1,26 @@
+<?php
+    $legion1 = array
+    (
+        "name" => "Legio III Augusta",
+        "garrison" => "Africa",
+        "foundationDate" => "41 bc"
+    );
+
+    $legion2 = array
+    (
+        "name" => "Legio III Cyrenaica",
+        "garrison" => "Arabia",
+        "foundationDate" => "36 bc"
+    );
+
+    $legion3 = array
+    (
+        "name" => "Legio VI Victrix",
+        "garrison" => "Britannia",
+        "foundationDate" => "41 bc"
+    );
+
+    //print_r($legion1);
+    echo $legion1["name"] . "<br>" . $legion1["garrison"] . "<br>" . $legion1["foundationDate"];
+        
+?>
