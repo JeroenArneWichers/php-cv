@@ -13,13 +13,64 @@
     <title>php cv</title>
   </head>
   <body>
-    <!-- <section id="header">
-        <div class="header-container">
-            <h1>Hypertext Preprocessor</h1>
-            <h2>Examples in worming your way trough the slog of trying to understand a 25 year old language.</h2>
-            <a href="" class="btn-calculate-your-options">Let's get started</a>
-        </div>
-    </section> -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-bottom">
+    <a class="navbar-brand">PHP EXAMPLES</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+            <a class="nav-link" href="#introduction">Introduction & Facts</a>
+        </li>
+        <li class="nav-item dropup">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Simple php basics
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#Declaring $variables & echo">Declaring $variables & echo</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#Simple php math">Simple php math</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#Functions and php math">Functions and php math</a>
+        </li>
+        <li class="nav-item dropup">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            User input and loops
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#$_POST">$_POST</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#If and if else loops">If and if else loops</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#For loops">For loops</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#While loops">While loops</a>
+        </li>
+        <li class="nav-item dropup">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Arrays
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#Simple array">Simple array</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#Array using for each">Array using for each</a>
+        </li>
+        <li class="nav-item dropup">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Advanced end products
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#User contact form">User contact form</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#Display content from array using selection">Display content from array using selection</a>
+        </li>
+        </ul>
+    </div>
+    </nav>
+
     <section id="header">
 		<header>
 		  <div class="overlay"></div>
@@ -50,7 +101,7 @@
     </section>
 
     <div class="container-fluid">
-        <div class="row spacertop100 spacerbottom100">
+        <div id="introduction" class="row spacertop100 spacerbottom100">
             <div class="col-lg-4">
                 <div class="card m-5" style="">
                     <img class="card-img-top" src="./img/danish-canadian-flag.png" alt="Card image cap">
@@ -88,7 +139,7 @@
     </div>
 
     <section id="quotes">
-        <div class="container">
+        <div id="Declaring $variables & echo" class="container">
             <div class="row">
             <div class="col-lg-12 text-center">
                 <h1>"Now that you know...</h1>
@@ -163,7 +214,7 @@
 
     <section id="quotes">
         <div class="container">
-            <div class="row">
+            <div id="Simple php math" class="row">
             <div class="col-lg-12 text-center">
                 <h1>"The basics are now known...</h1>
                 <h1>Let's start doing some math..."</h1>
@@ -249,7 +300,7 @@
 
     <section id="quotes">
         <div class="container">
-            <div class="row">
+            <div id="Functions and php math" class="row">
             <div class="col-lg-12 text-center">
                 <h1>"Let's make it a little bit harder...</h1>
                 <h1>By doing the same thing using functions..."</h1>
@@ -362,7 +413,7 @@
 
     <section id="quotes">
         <div class="container">
-            <div class="row">
+            <div id="$_POST" class="row">
             <div class="col-lg-12 text-center">
                 <h1>"Time for the truly advanced stuff...</h1>
                 <h1>Let's do something with user input..."</h1>
@@ -443,7 +494,7 @@
     </div>
 
     <section id="quotes">
-        <div class="container">
+        <div id="If and if else loops" class="container">
             <div class="row">
             <div class="col-lg-12 text-center">
                 <h1>"The next step is statements...</h1>
@@ -557,7 +608,7 @@
 
     <section id="quotes">
         <div class="container">
-            <div class="row">
+            <div id="For loops" class="row">
             <div class="col-lg-12 text-center">
                 <h1>"The next step in php...</h1>
                 <h1>are for loops..."</h1>
@@ -701,7 +752,7 @@
 
     <section id="quotes">
         <div class="container">
-            <div class="row">
+            <div id="While loops" class="row">
             <div class="col-lg-12 text-center">
                 <h1>"While loops...</h1>
                 <h1>counting up..."</h1>
@@ -716,7 +767,7 @@
                 <div class="card m-5 p-3" style="">
                     <img class="card-img-top" src="./img/faq-background.jpeg" alt="Card image cap">
                     <p class="card-text">
-                        <h2>PHP for while loops</h2>
+                        <h2>PHP while loops</h2>
                         <h5>Optellen van getallen</h5>
                         <?php
                         //init
@@ -780,10 +831,10 @@
 
     <section id="quotes">
         <div class="container">
-            <div class="row">
+            <div id="Simple array" class="row">
             <div class="col-lg-12 text-center">
                 <h1>"And now for something...</h1>
-                <h1>completly different..."</h1>
+                <h1>completly different...</h1>
                 <h1>Arrays..."</h1>
             </div>
             </div>
@@ -853,7 +904,7 @@
             <div class="row">
             <div class="col-lg-12 text-center">
                 <h1>"And now for something...</h1>
-                <h1>completly different..."</h1>
+                <h1>completly different...</h1>
                 <h1>Arrays in reverse..."</h1>
             </div>
             </div>
@@ -866,7 +917,7 @@
                 <div class="card m-5 p-3" style="">
                     <img class="card-img-top" src="./img/faq-background.jpeg" alt="Card image cap">
                     <p class="card-text">
-                        <h2>Display content of an array in reverse</h2>
+                        <h2>Display content of an array in reverse.</h2>
                         <?php
                         $icons = array ("Trump", "Hillary", "Bernie", "Pewdiepie");
                         $size = sizeof($icons);
@@ -904,14 +955,80 @@
             <div class="col-lg-4">
                 <div class="card m-5 p-3" style="">
                     <p class="card-text">First we start by opening the &lt?php tag.</p>
-                    <p class="card-text">.</p>
-                    <p class="card-text">.</p>
-                    <p class="card-text">.</p>
-                    <p class="card-text">.</p>
-                    <p class="card-text">.</p>
-                    <p class="card-text">.</p>
-                    <p class="card-text">.</p>
-                    <p class="card-text">.</p>
+                    <p class="card-text">We then create an array name $icons and fill it.</p>
+                    <p class="card-text">$size will be equal to to the size of $icons. Wich in this case will be 4.</p>
+                    <p class="card-text">Then we start the loop. We set variable $i at 3 (the number of $size-1).</p>
+                    <p class="card-text">We then check if it's greater or equal to 0. If so, continue the code.</p>
+                    <p class="card-text">With $i-- we decrease it by 1. And execute the next part. Echoing $icons.</p>
+                    <p class="card-text">The first echo will be $icons number 3 ($size-1). Then it will echo $icons number 2, etc.</p>
+                    <p class="card-text">Should $i no longer be great or equal to 0 the code will end.</p>
+                    <p class="card-text">The end is always a php end tag. Like this ?></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id="quotes">
+        <div class="container">
+            <div id="Array using for each" class="row">
+            <div class="col-lg-12 text-center">
+                <h1>"One more thing about loops...</h1>
+                <h1>For each..."</h1>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container-fluid">
+        <div class="row spacertop100 spacerbottom100">
+            <div class="col-lg-3">
+                <div class="card m-5 p-3" style="">
+                    <img class="card-img-top" src="./img/faq-background.jpeg" alt="Card image cap">
+                    <p class="card-text">
+                        <h2>Display content of an array using for each.</h2>
+                        <?php
+                        $icons = array ("Trump", "Hillary", "Bernie", "Pewdiepie");
+
+                        foreach ($icons as $value)
+                        {
+                            echo $value . "<br>";
+                        }
+                        ?>
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-5">
+                <div class="card m-5 p-3" style="">
+                    <p class="card-text">
+                    <?php
+                        $myTextFile = "php-code-snippet-11.txt";
+                        //vast stellen van de variabele. Aanroepen .txt bestand.
+
+                        $textOutput = fopen($myTextFile, 'r');
+                        //zeggen dat hij .txt moet openen. En zet op read only.
+
+                        $theData = fread($textOutput, filesize($myTextFile));
+                        //zeggen dat hij hem moet lezen. De volledige lengte van het .txt bestand.
+
+                        fclose($textOutput);
+                        //zeggen dat hij moet stoppen met lezen .txt
+
+                        echo '<pre>' . htmlspecialchars ($theData) . '</pre>';
+                        //toepassen htmlspecialchars
+                        //uitspuugen van de $theData variabele (doorverwijst naar .txt)
+                    ?>
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card m-5 p-3" style="">
+                    <p class="card-text">First we start by opening the &lt?php tag.</p>
+                    <p class="card-text">We then create an array name $icons and fill it.</p>
+                    <p class="card-text">Then we start the loop with the condition.</p>
+                    <p class="card-text">For every loop iteration, the value of the current array element is assigned to $value.</p>
+                    <p class="card-text">The array pointer is then moved by one, until it reaches the last array element.</p>
+                    <p class="card-text">Then it stops the code.</p>
+                    <p class="card-text">The content of the array is then displayed one by one. Using echo.</p>
                     <p class="card-text">The end is always a php end tag. Like this ?></p>
                 </div>
             </div>
@@ -921,10 +1038,10 @@
 
     <section id="quotes">
         <div class="container">
-            <div class="row">
+            <div id="User contact form" class="row">
             <div class="col-lg-12 text-center">
                 <h1>"Let's end with something...</h1>
-                <h1>truly special..."</h1>
+                <h1>truly special...</h1>
                 <h1>User contact form..."</h1>
                 <h5>(that writes the data to a .txt and can be retrieved again.)</h5>
             </div>
@@ -962,13 +1079,13 @@
                             if (empty($name) && empty($age) && empty($residence) && empty($email) && empty($message)) 
                             {
                                 echo "<br/>" . "Please input the fields correctly.";
-                                return false;
+                            }
+                            else 
+                            {
+                                echo "<h5>Your comment was:</h5>";
+                                echo file_get_contents( "user-comments.txt" ); // get the contents, and echo it out.
                             }
                         ?>
-                        <br/><h5>Your comment was:</h5>
-                        <?php
-                            echo file_get_contents( "user-comments.txt" ); // get the contents, and echo it out.
-                        ?>    
                     </p>
                 </div>
             </div>
@@ -976,7 +1093,7 @@
                 <div class="card m-5 p-3" style="">
                     <p class="card-text">
                     <?php
-                        $myTextFile = "php-code-snippet-11.txt";
+                        $myTextFile = "php-code-snippet-12.txt";
                         //vast stellen van de variabele. Aanroepen .txt bestand.
 
                         $textOutput = fopen($myTextFile, 'r');
@@ -997,15 +1114,82 @@
             </div>
             <div class="col-lg-4">
                 <div class="card m-5 p-3" style="">
-                    <p class="card-text">First we start by opening the &lt?php tag.</p>
-                    <p class="card-text">.</p>
-                    <p class="card-text">.</p>
-                    <p class="card-text">.</p>
-                    <p class="card-text">.</p>
-                    <p class="card-text">.</p>
-                    <p class="card-text">.</p>
-                    <p class="card-text">.</p>
-                    <p class="card-text">.</p>
+                    <p class="card-text">We already discussed creating a form. So you already know that.</p>
+                    <p class="card-text">Regarding the important part we first start by opening the &lt?php tagand setting the variables.</p>
+                    <p class="card-text">The variable $name will be filled with the content we get from the 'nameUser' input field we get from $_POST. </p>
+                    <p class="card-text">The next part is opening a .txt file named 'user-comments.txt'. If it doesn't exsist yet. No matter. fopen opens as well as creates the file. We use fopen for that. </p>
+                    <p class="card-text">After fopen we write a w. For writing to the file. If you wanted to append to it, thus saving the previous text you wrote to it, you would've written an a.</p>
+                    <p class="card-text">With $savestring you can set the variables (and other contents) that you want to write to the .txt file.</p>
+                    <p class="card-text">Then we have to tell php to actually write the $savestring to the .txt file.</p>
+                    <p class="card-text">In order to prevent empty field submission we make an if else statement. If the $name, $age etc are empty echo the corresponding string.</p>
+                    <p class="card-text">If the variables are filled echo the content from user-comments.txt.</p>
+                    <p class="card-text">The end is always a php end tag. Like this ?></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id="quotes">
+        <div class="container">
+            <div id="Display content from array using selection" class="row">
+            <div class="col-lg-12 text-center">
+                <h1>"As an added bonus..."</h1>
+                <h5>(let's make an array that displays ...</h5>
+                <h5>it's contents based on selection...)</h5>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container-fluid">
+        <div class="row spacertop100 spacerbottom100">
+            <div class="col-lg-3">
+                <div class="card m-5 p-3" style="">
+                    <img class="card-img-top" src="./img/faq-background.jpeg" alt="Card image cap">
+                    <p class="card-text">
+                        <h2>Roman legions</h2>
+                        <h5>(based on selection variables)</h5>
+
+                        <?php
+                            
+                        ?>
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-5">
+                <div class="card m-5 p-3" style="">
+                    <p class="card-text">
+                    <?php
+                        $myTextFile = "php-code-snippet-12.txt";
+                        //vast stellen van de variabele. Aanroepen .txt bestand.
+
+                        $textOutput = fopen($myTextFile, 'r');
+                        //zeggen dat hij .txt moet openen. En zet op read only.
+
+                        $theData = fread($textOutput, filesize($myTextFile));
+                        //zeggen dat hij hem moet lezen. De volledige lengte van het .txt bestand.
+
+                        fclose($textOutput);
+                        //zeggen dat hij moet stoppen met lezen .txt
+
+                        echo '<pre>' . htmlspecialchars ($theData) . '</pre>';
+                        //toepassen htmlspecialchars
+                        //uitspuugen van de $theData variabele (doorverwijst naar .txt)
+                    ?>
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card m-5 p-3" style="">
+                    <p class="card-text">We already discussed creating a form. So you already know that.</p>
+                    <p class="card-text">Regarding the important part we first start by opening the &lt?php tagand setting the variables.</p>
+                    <p class="card-text">The variable $name will be filled with the content we get from the 'nameUser' input field we get from $_POST. </p>
+                    <p class="card-text">The next part is opening a .txt file named 'user-comments.txt'. If it doesn't exsist yet. No matter. fopen opens as well as creates the file. We use fopen for that. </p>
+                    <p class="card-text">After fopen we write a w. For writing to the file. If you wanted to append to it, thus saving the previous text you wrote to it, you would've written an a.</p>
+                    <p class="card-text">With $savestring you can set the variables (and other contents) that you want to write to the .txt file.</p>
+                    <p class="card-text">Then we have to tell php to actually write the $savestring to the .txt file.</p>
+                    <p class="card-text">In order to prevent empty field submission we make an if else statement. If the $name, $age etc are empty echo the corresponding string.</p>
+                    <p class="card-text">If the variables are filled echo the content from user-comments.txt.</p>
                     <p class="card-text">The end is always a php end tag. Like this ?></p>
                 </div>
             </div>
@@ -1017,5 +1201,19 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  
+    <script>
+        $("#submit").click(function() {
+        $(".element").each(function() {
+            if ($(this).attr("id") == $("#searchField").val()) {
+            $('html,body').animate({
+                scrollTop: $(this).offset().top
+            });
+            }
+        });
+    });
+    </script>
+  
+  
   </body>
 </html>

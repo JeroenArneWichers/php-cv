@@ -1,31 +1,8 @@
-<form action="index.php" method="post">
-    <input id="nameUser" type="text" name="nameUser" placeholder = "Your name..."><br>
-    <input id="ageUser" type="number" name="ageUser" placeholder = "Your age..."><br>
-    <input id="residenceUser" type="text" name="residenceUser" placeholder = "Your place of residence..."><br>    
-    <input id="emailUser" type="text" name="emailUser" placeholder = "Your Email adress..."><br>
-    <textarea id="messageUser" placeholder="Your message can be placed here..." cols="20" rows="5" name="messageUser"></textarea>
-    <input type="submit" name="submit" value="Send message" onClick="return empty()">
-</form>
-
-
 <?php
-    $name = $_POST['nameUser'];
-    $age = $_POST['ageUser'];
-    $residence = $_POST['residenceUser'];
-    $email = $_POST['emailUser'];
-    $message = $_POST['messageUser'];
-    $fp = fopen("user-comments.txt", "w");
-    $savestring = "User name:" . $name . "," . "<br/>" . "User age:" . $age . "," . "<br/>" . "User residence:" . $residence . "," . "<br/>" . "User Email:" . $email . "," . "<br/>" . "User message:" . $message;
-    fwrite($fp, $savestring);
-    fclose($fp);
+    $icons = array ("Trump", "Hillary", "Bernie", "Pewdiepie");
 
-    if (empty($name) && empty($age) && empty($residence) && empty($email) && empty($message)) {
-    echo 'Please input the fields correctly.';
-    return false;
+    foreach ($icons as $value)
+    {
+        echo $value . "<br>";
     }
-?>
-
-<h5>The message you sent was the following:</h5>
-<?php
-    echo file_get_contents( "user-comments.txt" ); // get the contents, and echo it out.
 ?>

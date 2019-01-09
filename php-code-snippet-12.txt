@@ -1,0 +1,21 @@
+<?php
+    $name = $_POST['nameUser'];
+    $age = $_POST['ageUser'];
+    $residence = $_POST['residenceUser'];
+    $email = $_POST['emailUser'];
+    $message = $_POST['messageUser'];
+    $fp = fopen("user-comments.txt", "w");
+    $savestring = "User name:" . $name . "," . "<br/>" . "User age:" . $age . "," . "<br/>" . "User residence:" . $residence . "," . "<br/>" . "User Email:" . $email . "," . "<br/>" . "User message:" . $message;
+    fwrite($fp, $savestring);
+    fclose($fp);
+
+    if (empty($name) && empty($age) && empty($residence) && empty($email) && empty($message)) 
+    {
+        echo "<br/>" . "Please input the fields correctly.";
+    }
+    else 
+    {
+        echo "<h5>Your comment was:</h5>";
+        echo file_get_contents( "user-comments.txt" ); // get the contents, and echo it out.
+    }
+?>
