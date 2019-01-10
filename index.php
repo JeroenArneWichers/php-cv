@@ -1356,10 +1356,10 @@
             <div id="database" class="row">
             <div class="col-lg-12 text-center">
                 <h1>"A final word...</h1>
-                <h1>I truly hope this...</h1>
-                <h1>small sample page...</h1>
-                <h1>has been as helpfull for you...</h1> 
-                <h1>as it has been for me making it..."</h1>
+                <h1>...I truly hope this...</h1>
+                <h1>...small sample page...</h1>
+                <h1>...has been as helpfull for you...</h1> 
+                <h1>...as it has been for me making it..."</h1>
             </div>
             </div>
         </div>
