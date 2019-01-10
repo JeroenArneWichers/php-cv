@@ -118,6 +118,15 @@ header .overlay {
     color: white;
   }
 
+  #quotes2 {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/book-background.jpeg) fixed center center;
+    background-size: cover;
+    padding: 280px 0;
+    border-bottom: black solid 5px;
+    border-top: black solid 5px;
+    color: white;
+  }
+
 .custom-card-img{
     width: 36em;
     height: auto;

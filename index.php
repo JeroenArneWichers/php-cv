@@ -69,6 +69,8 @@
             <a class="dropdown-item" href="#User contact form">User contact form</a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="#Display content from array using selection">Display content from array using selection</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#database">Database</a>
         </li>
         </ul>
     </div>
@@ -1203,10 +1205,14 @@
                         //print_r($legion1);
                         //
 
-                        $legion = $_POST["Africa"];
+                        //$legion = $_POST["Africa"];
 
-                        echo $legion["name"] . "<br>" . $legion["garrison"] . "<br>" . $legion["foundationDate"] . "<br>" . $legion["briefHistory"];
-
+                        //echo $legion1["name"] . "<br>" . $legion["garrison"] . "<br>" . $legion["foundationDate"] . "<br>" . $legion["briefHistory"];
+                        echo $legion1["garrison"];
+                        echo "<br>";
+                        echo $legion1["foundationDate"];
+                        echo "<br>";
+                        echo $legion1["briefHistory"];
 
                         ?>
                     </p>
@@ -1251,6 +1257,113 @@
             </div>
         </div>
     </div>
+
+    <section id="quotes">
+        <div class="container">
+            <div id="database" class="row">
+            <div class="col-lg-12 text-center">
+                <h1>"Just one more thing..."</h1>
+                <h5>(creating databases and connecting to it with php...)</h5>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container-fluid">
+        <div class="row spacertop100 spacerbottom100">
+            <div class="col-lg-3">
+                <div class="card m-5 p-3" style="">
+                    <img class="card-img-top" src="./img/faq-background.jpeg" alt="Card image cap">
+                    <p class="card-text">
+                        <h2>Roman legions</h2>
+                        <h5>(pulled from database)</h5>
+                        <br>
+
+                        <!-- Ik wil een provincie kunnen selecteren -->
+
+                        <h4>This part unfortunatly won't work without a live running database.</h4>
+
+                        <?php
+                        // voorwaarde met PDO en niet!!! met mysql of mysqli. Dus van deze tijd en flexibel.
+                        // ik wil een connectie met de database server
+                        $conn = new PDO("mysql:host=127.0.0.1;dbname=project1", "root", "");
+
+                        //stuur een sql query naar database server
+                        $stmt = $conn->query("SELECT * FROM legions");
+
+                        //antwoord van database server opvragen
+                        //door het antwoord heen lopen
+                        while ($row = $stmt->fetch())
+                        {
+
+                        //en weergeven als pagina naar gebruiker als HTML   
+                        echo "<li>" . "Legion name: " . $row["name"] . 
+                        "<br>" . "Legion garrison: " . $row["garrison"] . 
+                        "<br>" . "Legion foundation date: " . $row["foundationDate"] . 
+                        "<br>" . "Legion brief history: " . $row["briefHistory"] . "</li>"; 
+
+                        }
+
+                        //verbreek verbinding met database server
+
+                        $conn = NULL;
+                        ?>
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-5">
+                <div class="card m-5 p-3" style="">
+                    <p class="card-text">
+                    <?php
+                        $myTextFile = "php-code-snippet-14.txt";
+                        //vast stellen van de variabele. Aanroepen .txt bestand.
+
+                        $textOutput = fopen($myTextFile, 'r');
+                        //zeggen dat hij .txt moet openen. En zet op read only.
+
+                        $theData = fread($textOutput, filesize($myTextFile));
+                        //zeggen dat hij hem moet lezen. De volledige lengte van het .txt bestand.
+
+                        fclose($textOutput);
+                        //zeggen dat hij moet stoppen met lezen .txt
+
+                        echo '<pre>' . htmlspecialchars ($theData) . '</pre>';
+                        //toepassen htmlspecialchars
+                        //uitspuugen van de $theData variabele (doorverwijst naar .txt)
+                    ?>
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card m-5 p-3" style="">
+                    <p class="card-text">.</p>
+                    <p class="card-text">.</p>
+                    <p class="card-text">.</p>
+                    <p class="card-text">.</p>
+                    <p class="card-text">.</p>
+                    <p class="card-text">.</p>
+                    <p class="card-text">.</p>
+                    <p class="card-text">.</p>
+                    <p class="card-text">If the variables are filled echo the content from user-comments.txt.</p>
+                    <p class="card-text">The end is always a php end tag. Like this ?></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id="quotes2">
+        <div class="container">
+            <div id="database" class="row">
+            <div class="col-lg-12 text-center">
+                <h1>"A final word...</h1>
+                <h1>I truly hope this...</h1>
+                <h1>small sample page...</h1>
+                <h1>has been as helpfull for you...</h1> 
+                <h1>as it has been for me making it..."</h1>
+            </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

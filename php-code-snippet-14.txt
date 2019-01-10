@@ -1,0 +1,13 @@
+<?php
+    $conn = new PDO("mysql:host=127.0.0.1;dbname=project1", "root", "");
+    $stmt = $conn->query("SELECT * FROM legions");
+
+    while ($row = $stmt->fetch())
+    {
+    echo "<li>" . "Legion name: " . $row["name"] . 
+    "<br>" . "Legion garrison: " . $row["garrison"] . 
+    "<br>" . "Legion foundation date: " . $row["foundationDate"] . 
+    "<br>" . "Legion brief history: " . $row["briefHistory"] . "</li>"; 
+    }
+    $conn = NULL;
+    ?>
