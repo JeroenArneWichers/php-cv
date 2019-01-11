@@ -64,3 +64,24 @@
     $conn = NULL;
 
 ?>
+
+<?php
+    $conn = new PDO("mysql:host=127.0.0.1;dbname=project1", "root", "");
+
+    $stmt = $conn->prepare("DELETE FROM legions WHERE id=:fdelid AND name=:fdelLegion AND garrison=:fdelGarrison AND foundationDate=:fdelFoundationDate AND briefHistory=:fdelBriefHistory");
+
+    $stmt->bindParam(':fdelLegion',$delLegion);
+    $stmt->bindParam(':fdelGarrison',$delGarrison);
+    $stmt->bindParam(':fdelFoundationDate',$delFoundationDate);
+    $stmt->bindParam(':fdelBriefHistory',$delBriefHistory);
+    $stmt->bindParam(':fdelid',$delid);
+
+    $delLegion = $_POST["delLegion"];
+    $delGarrison = $_POST["delGarrison"];
+    $delFoundationDate = $_POST["delFoundationDate"];
+    $delBriefHistory = $_POST["delBriefHistory"];
+    $delid = $_POST["delid"];
+    $stmt->execute();
+
+    $conn = NULL;
+?>
