@@ -1,0 +1,66 @@
+<form action="index.php" method="POST">
+    <input name="newLegion" placeholder="New Legion name...">
+    <br>
+    <input name="newGarrison" placeholder="New Garrison...">
+    <br>
+    <input name="newFoundationDate" placeholder="New Foundation Date...">
+    <br>
+    <input name="newBriefHistory" placeholder="New Brief History...">
+    <br>
+    <button type="submit">Add Legion</button>
+    </input>
+</form>
+
+<?php
+    $conn = new PDO("mysql:host=127.0.0.1;dbname=project1", "root", "");
+
+    $stmt = $conn->prepare("INSERT INTO legions (name, garrison, foundationDate, briefHistory) VALUES (:fnewLegion, :fnewGarrison, :fnewFoundationDate, :fnewBriefHistory)");
+
+    $stmt->bindParam(':fnewLegion',$newLegion);
+    $stmt->bindParam(':fnewGarrison',$newGarrison);
+    $stmt->bindParam(':fnewFoundationDate',$newFoundationDate);
+    $stmt->bindParam(':fnewBriefHistory',$newBriefHistory);
+
+    $newLegion = $_POST["newLegion"];
+    $newGarrison = $_POST["newGarrison"];
+    $newFoundationDate = $_POST["newFoundationDate"];
+    $newBriefHistory = $_POST["newBriefHistory"];
+    $stmt->execute();
+
+    $conn = NULL;
+?>
+
+<?php
+    $conn = new PDO("mysql:host=127.0.0.1;dbname=project1", "root", "");
+
+    $stmt = $conn->query("SELECT * FROM legions");
+
+    while ($row = $stmt->fetch())
+    {
+
+    echo "Legion name: " . $row["name"] . "<br>" . "Legion garrison: " . $row["garrison"] . "<br>" . "Legion foundation date: " . $row["foundationDate"] . "<br>" . "Legion brief history: " . $row["briefHistory"] . "<br>" . "ID of article: " . $row["id"] . "<br>" . "<br>"; 
+
+    }
+    $conn = NULL;
+?>
+
+<?php
+
+    $conn = new PDO("mysql:host=127.0.0.1;dbname=project1", "root", "");
+
+    $stmt = $conn->prepare("INSERT INTO legions (name, garrison, foundationDate, briefHistory) VALUES (:fnewLegion, :fnewGarrison, :fnewFoundationDate, :fnewBriefHistory)");
+
+    $stmt->bindParam(':fnewLegion',$newLegion);
+    $stmt->bindParam(':fnewGarrison',$newGarrison);
+    $stmt->bindParam(':fnewFoundationDate',$newFoundationDate);
+    $stmt->bindParam(':fnewBriefHistory',$newBriefHistory);
+
+    $newLegion = $_POST["newLegion"];
+    $newGarrison = $_POST["newGarrison"];
+    $newFoundationDate = $_POST["newFoundationDate"];
+    $newBriefHistory = $_POST["newBriefHistory"];
+    $stmt->execute();
+
+    $conn = NULL;
+
+?>
