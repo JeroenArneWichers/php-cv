@@ -1351,6 +1351,137 @@
         </div>
     </div>
 
+    <section id="quotes">
+        <div class="container">
+            <div id="database" class="row">
+            <div class="col-lg-12 text-center">
+                <h1>"Just one more thing..."</h1>
+                <h5>(adding to databases)</h5>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container-fluid">
+        <div class="row spacertop100 spacerbottom100">
+            <div class="col-lg-3">
+                <div class="card m-5 p-3" style="">
+                    <img class="card-img-top" src="./img/faq-background.jpeg" alt="Card image cap">
+                    <p class="card-text">
+                        <h2>Roman legions</h2>
+                        <h5>(pulled from database)</h5>
+                        <h5>(add to it using forms)</h5>
+                        <br>
+
+                        <!-- Ik wil een provincie kunnen selecteren -->
+
+                        <h4>This part unfortunatly won't work without a live running database.</h4>
+                        <form action="index.php" method="POST">
+                            <input name="newLegion" placeholder="New Legion name...">
+                            <br>
+                            <input name="newGarrison" placeholder="New Garrison...">
+                            <br>
+                            <input name="newFoundationDate" placeholder="New Foundation Date...">
+                            <br>
+                            <input name="newBriefHistory" placeholder="New Brief History...">
+                            <br>
+                            <button type="submit">Add Legion</button>
+                            </input>
+                        </form>
+                        <?php
+                            $conn = new PDO("mysql:host=127.0.0.1;dbname=project1", "root", "");
+
+                            $stmt = $conn->prepare("INSERT INTO legions (name, garrison, foundationDate, briefHistory) VALUES (:fnewLegion, :fnewGarrison, :fnewFoundationDate, :fnewBriefHistory)");
+
+                            $stmt->bindParam(':fnewLegion',$newLegion);
+                            $stmt->bindParam(':fnewGarrison',$newGarrison);
+                            $stmt->bindParam(':fnewFoundationDate',$newFoundationDate);
+                            $stmt->bindParam(':fnewBriefHistory',$newBriefHistory);
+
+                            $newLegion = $_POST["newLegion"];
+                            $newGarrison = $_POST["newGarrison"];
+                            $newFoundationDate = $_POST["newFoundationDate"];
+                            $newBriefHistory = $_POST["newBriefHistory"];
+                            $stmt->execute();
+
+                            $conn = NULL;
+                        ?>
+                        <?php
+                            $conn = new PDO("mysql:host=127.0.0.1;dbname=project1", "root", "");
+
+                            $stmt = $conn->query("SELECT * FROM legions");
+
+                            while ($row = $stmt->fetch())
+                            {
+ 
+                            echo "Legion name: " . $row["name"] . "<br>" . "Legion garrison: " . $row["garrison"] . "<br>" . "Legion foundation date: " . $row["foundationDate"] . "<br>" . "Legion brief history: " . $row["briefHistory"] . "<br>" . "ID of article: " . $row["id"] . "<br>" . "<br>"; 
+
+                            }
+                            $conn = NULL;
+                        ?>
+                        <?php
+
+                            $conn = new PDO("mysql:host=127.0.0.1;dbname=project1", "root", "");
+
+                            $stmt = $conn->prepare("INSERT INTO legions (name, garrison, foundationDate, briefHistory) VALUES (:fnewLegion, :fnewGarrison, :fnewFoundationDate, :fnewBriefHistory)");
+
+                            $stmt->bindParam(':fnewLegion',$newLegion);
+                            $stmt->bindParam(':fnewGarrison',$newGarrison);
+                            $stmt->bindParam(':fnewFoundationDate',$newFoundationDate);
+                            $stmt->bindParam(':fnewBriefHistory',$newBriefHistory);
+
+                            $newLegion = $_POST["newLegion"];
+                            $newGarrison = $_POST["newGarrison"];
+                            $newFoundationDate = $_POST["newFoundationDate"];
+                            $newBriefHistory = $_POST["newBriefHistory"];
+                            $stmt->execute();
+
+                            $conn = NULL;
+
+                        ?>
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-5">
+                <div class="card m-5 p-3" style="">
+                    <p class="card-text">
+                    <?php
+                        $myTextFile = "php-code-snippet-15.txt";
+                        //vast stellen van de variabele. Aanroepen .txt bestand.
+
+                        $textOutput = fopen($myTextFile, 'r');
+                        //zeggen dat hij .txt moet openen. En zet op read only.
+
+                        $theData = fread($textOutput, filesize($myTextFile));
+                        //zeggen dat hij hem moet lezen. De volledige lengte van het .txt bestand.
+
+                        fclose($textOutput);
+                        //zeggen dat hij moet stoppen met lezen .txt
+
+                        echo '<pre>' . htmlspecialchars ($theData) . '</pre>';
+                        //toepassen htmlspecialchars
+                        //uitspuugen van de $theData variabele (doorverwijst naar .txt)
+                    ?>
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card m-5 p-3" style="">
+                    <p class="card-text">.</p>
+                    <p class="card-text">.</p>
+                    <p class="card-text">.</p>
+                    <p class="card-text">.</p>
+                    <p class="card-text">.</p>
+                    <p class="card-text">.</p>
+                    <p class="card-text">.</p>
+                    <p class="card-text">.</p>
+                    <p class="card-text">If the variables are filled echo the content from user-comments.txt.</p>
+                    <p class="card-text">The end is always a php end tag. Like this ?></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <section id="quotes2">
         <div class="container">
             <div id="database" class="row">
