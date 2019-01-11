@@ -1388,6 +1388,26 @@
                             <button type="submit">Add Legion</button>
                             </input>
                         </form>
+
+                        <br>
+                        <hr>
+                        <br>
+
+                        <form action="index.php" method="POST">
+                            <input name="delLegion" placeholder="Delete Legion name...">
+                            <br>
+                            <input name="delGarrison" placeholder="Delete Garrison...">
+                            <br>
+                            <input name="delFoundationDate" placeholder="Delete Foundation Date...">
+                            <br>
+                            <input name="delBriefHistory" placeholder="Delete Brief History...">
+                            <br>
+                            <input name="delid" placeholder="Delete id...">
+                            <br>
+                            <button type="submit">Delete Legion</button>
+                            </input>
+                        </form>
+
                         <?php
                             $conn = new PDO("mysql:host=127.0.0.1;dbname=project1", "root", "");
 
@@ -1406,6 +1426,7 @@
 
                             $conn = NULL;
                         ?>
+
                         <?php
                             $conn = new PDO("mysql:host=127.0.0.1;dbname=project1", "root", "");
 
@@ -1419,8 +1440,8 @@
                             }
                             $conn = NULL;
                         ?>
-                        <?php
 
+                        <?php
                             $conn = new PDO("mysql:host=127.0.0.1;dbname=project1", "root", "");
 
                             $stmt = $conn->prepare("INSERT INTO legions (name, garrison, foundationDate, briefHistory) VALUES (:fnewLegion, :fnewGarrison, :fnewFoundationDate, :fnewBriefHistory)");
@@ -1437,7 +1458,33 @@
                             $stmt->execute();
 
                             $conn = NULL;
+                        ?>
 
+                        <?php
+                            $conn = new PDO("mysql:host=127.0.0.1;dbname=project1", "root", "");
+
+                            $stmt = $conn->prepare("DELETE FROM legions WHERE id=:fdelid AND name=:fdelLegion AND garrison=:fdelGarrison AND foundationDate=:fdelFoundationDate AND briefHistory=:fdelBriefHistory");
+
+                            //(name, garrison, foundationDate, briefHistory, id) VALUES (:fdelLegion, :fdelGarrison, :fdelFoundationDate, :fdelBriefHistory, :fdelid)");
+
+                            $stmt->bindParam(':fdelLegion',$delLegion);
+                            $stmt->bindParam(':fdelGarrison',$delGarrison);
+                            $stmt->bindParam(':fdelFoundationDate',$delFoundationDate);
+                            $stmt->bindParam(':fdelBriefHistory',$delBriefHistory);
+                            $stmt->bindParam(':fdelid',$delid);
+
+                            $delLegion = $_POST["delLegion"];
+                            $delGarrison = $_POST["delGarrison"];
+                            $delFoundationDate = $_POST["delFoundationDate"];
+                            $delBriefHistory = $_POST["delBriefHistory"];
+                            $delid = $_POST["delid"];
+                            $stmt->execute();
+
+                            //echo $stmt;
+
+                            // $conn->exec($sql);
+
+                            $conn = NULL;
                         ?>
                     </p>
                 </div>
@@ -1505,7 +1552,11 @@
     <script>
 	  AOS.init();
     </script>
-  
+    <script>
+    if ( window.history.replaceState ) {
+        window.history.replaceState( null, null, window.location.href );
+    }
+    </script>
   
   </body>
 </html>
